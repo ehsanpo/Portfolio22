@@ -5,8 +5,9 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `var(--p3)`,
       marginBottom: `1.45rem`,
+      clipPath: `polygon(0 0,100% 0,100% calc(100% - 16px),calc(60% + 16px) calc(100% - 16px),60% 100%,40% 100%,calc(40% - 16px) calc(100% - 16px),0 calc(100% - 16px))`
     }}
   >
     <div
