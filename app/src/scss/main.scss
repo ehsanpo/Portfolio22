@@ -158,6 +158,9 @@ h1{
 		flex:1;
 	}
 }
+.v-center {
+    align-self: center;
+}
 section{
 	padding: 128px 0;
 	background:var(--p3);
@@ -237,3 +240,7 @@ animation-fill-mode: backwards;
 		clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
 	}
 }
+
+
+
+

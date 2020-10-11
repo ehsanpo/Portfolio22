@@ -5,15 +5,17 @@ import SEO from "../components/seo";
 import Button from "../components/Button";
 import Box from "../components/Card";
 import Stack from "../components/Stack";
+import Award from "../components/Award";
 import Parallax from "../components/ParallaxImage";
+import Hero from "../components/Hero";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Button >See Portfolio</Button>
-    <Button cta>Get Started</Button>
-    <Button sec >see Skills</Button>
-    <Button className="btn--3" >About Ehsan</Button>
+    <Hero />
+
+
+
     <section>
       <InViewMonitor
         intoViewMargin="8%"
@@ -59,7 +61,6 @@ const IndexPage = () => (
 
       </div>
       <div className="center">
-
         <Button className="btn--3">See Portfolio</Button>
       </div>
     </section>
@@ -93,6 +94,48 @@ const IndexPage = () => (
       </div>
     </section>
     <Parallax filename="bg1.jpg" />
+
+    <section>
+      <InViewMonitor
+        intoViewMargin="8%"
+        classNameNotInView='vis-hidden'
+        classNameInView='animated titleIn'
+        toggleClassNameOnInView
+      >
+      <h2 className="blue">Awards</h2>
+      </InViewMonitor>
+      <div className="wrapper">
+
+        <Award
+          img={{}}
+          headline="Svenska design"
+          description="Gold Category Digital Design"
+          link="/portfolio/malmo-saluhall/"
+        ></Award>
+          <Award
+          img={{}}
+          headline="Svenska design"
+          description="Gold Category Digital Design"
+          link="/portfolio/malmo-saluhall/"
+        ></Award>
+          <Award
+          img={{}}
+          headline="Svenska design"
+          description="Gold Category Digital Design"
+          link="/portfolio/malmo-saluhall/"
+        ></Award>
+          <Award
+          img={{}}
+          headline="Svenska design"
+          description="Gold Category Digital Design"
+          link="/portfolio/malmo-saluhall/"
+        ></Award>
+      </div>
+      <div className="center">
+        <Button className="btn--3">About Ehsan</Button>
+      </div>
+    </section>
+    
   </Layout>
 )
 
