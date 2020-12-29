@@ -1,0 +1,186 @@
+/* Typography
+ ========================================================================== */
+
+
+ @font-face {
+	font-family:"Tomorrow";
+	src:url("../../static/fonts/Tomorrow-Regular.woff2") format("woff2"),
+	url("../../static/fonts/Tomorrow-Regular.woff") format("woff"),
+	url("../../static/fonts/Tomorrow-Regular.ttf") format("opentype");
+	font-style:normal;
+	font-weight:400;
+}
+@font-face {
+    font-family: 'hudson';
+    src: url('../../static/fonts/HudsonNY.woff2') format('woff2'),
+		 url('../../static/fonts/HudsonNY.woff') format('woff');
+	font-style:normal;
+	font-weight:600;
+
+}
+
+
+$headlineFont: "hudson";
+$bodyFont: "Tomorrow"; 
+
+html{
+	font-size: 16px;
+	background: #2e3443;
+}
+body{
+	line-height: 1.5;
+	background: var(--gx);
+	background-attachment: fixed;
+	color:#fff;
+	font-family:$bodyFont;
+	position: relative;
+    z-index: 1;
+}
+a {
+	color:#fff;
+	font-family:$headlineFont;
+	text-decoration: none;
+	font-weight: bold;
+	&:hover{
+		color: #fff;
+	}
+}
+h1 {
+	font-size: 40px;
+	font-family:$headlineFont;
+	letter-spacing: -0.8px;
+	line-height: 1;
+	font-weight: bold;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;	
+	@include bp-medium{
+		font-size: 48px;
+	}
+}
+
+@keyframes boxin {
+  0% {
+   	height: 0%;
+
+    }
+  100% {
+   height: 27%;} 
+}
+@keyframes boxin2 {
+  0% {
+   	height: 0%;
+
+    }
+  100% {
+   height: 74%;} 
+}
+h2 {
+	line-height: 1.25;
+	font-family:$headlineFont;
+	letter-spacing: -0.6px;
+	font-size: 28px;
+	margin-bottom: 16px;
+	font-weight: bold;
+	display: inline-block;
+	//padding: 2px 16px;
+	
+	
+	@include bp-medium{
+		font-size: 32px;
+		letter-spacing: -0.7px;
+	}
+}
+
+section{
+	h2{
+		margin-bottom: 32px;
+		text-transform: uppercase;
+		display: block;
+		
+	}
+}
+
+h3 {
+	font-family:$bodyFont;
+	font-size: 24px;
+	line-height: 1.21;
+	letter-spacing: -0.5px;
+	margin-bottom: 16px;
+	font-weight: bold;
+}
+
+h4 {
+	font-family:$headlineFont;
+	line-height: 1.25;
+	font-size: 16px;
+	
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+
+h5 {
+	font-family:$headlineFont;
+	font-size: 14px;
+	line-height: 1.21;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+h6 {
+	font-family:$headlineFont;
+	font-size: 14px;
+	line-height: 1.21;
+	margin-bottom: 8px;
+	font-weight: bold;
+
+}
+
+p{
+	line-height: 1.5;
+	margin-bottom: 8px;
+	font-size: 16px;
+}
+.f-l{
+	font-size: 20px;
+}
+.f-s{
+	font-size: 14px;
+}
+.display{
+	font-size: 48px;
+	line-height: 1;
+	@include bp-medium{
+		font-size: 64px;
+	}
+}
+.list_style{
+	ul{
+		padding-left: 24px;
+		list-style: disc;
+		margin-bottom: 16px;
+	}
+	li{
+		line-height: 1.5;
+	}
+}
+.button{
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.29;
+	letter-spacing: 0.6px;
+	color: #000;
+	&:hover{
+		color: lighten(#000, 30%);
+	}
+}
+.navbar-link{
+	font-size: 14px;
+	line-height: 1.29;
+	font-weight: bold;
+	color: #000;
+	&:hover{
+		color: lighten(#000, 30%);
+	}
+}
+

@@ -22,32 +22,44 @@ html{
 	--g5: linear-gradient(90deg, var(--c5) , var(--orange));
 	--block-h: 30vh;
 }
+@import "lib/normalize.scss";
+@import "base/_all.scss";
+@import "elements/header.scss";
+@import "elements/typography.scss";
+
+// @import "layout/page.scss";
+// @import "elements/footer.scss";
+// @import "elements/forms.scss";
+// @import "lib/aos.scss";
+
+// @import "blocks/skills-block.scss"; 
+ 
+
+ 
+// @import "blocks/sponsor-standard.scss"; 
+ 
+
+ 
+// @import "blocks/article-standard.scss"; 
+ 
+// @import "blocks/article-boxed.scss"; 
+ 
+// @import "blocks/content-text_image-boxed.scss"; 
+ 
+// @import "blocks/content-text.scss"; 
+ 
+// @import "blocks/expe-block.scss"; 
+ 
+// @import "blocks/filter-post_filter.scss"; 
+ 
+// @import "blocks/sponsor-standard.scss"; 
+
+ 
+// @import "blocks/cta-standard.scss"; 
+  
+// @import "elements/share.scss"; 
 
 
-@font-face {
-	font-family:"Tomorrow";
-	src:url("../../static/fonts/Tomorrow-Regular.woff2") format("woff2"),
-	url("../../static/fonts/Tomorrow-Regular.woff") format("woff"),
-	url("../../static/fonts/Tomorrow-Regular.ttf") format("opentype");
-	font-style:normal;
-	font-weight:400;
-}
-@font-face {
-    font-family: 'hudson';
-    src: url('../../static/fonts/HudsonNY.woff2') format('woff2'),
-		 url('../../static/fonts/HudsonNY.woff') format('woff');
-	font-style:normal;
-	font-weight:600;
-
-}
-body{
-	background: var(--gx);
-	background-attachment: fixed;
-	margin: 0;
-	font-family:"Tomorrow";
-	line-height: 1.5;
-
-}
 .box:hover .box__glitch{
   display: block;
   animation: glitch-animation 1s linear 0s infinite;
@@ -148,17 +160,9 @@ h1{
 	}
 }
 .wrapper{
-	display: flex;
-	max-width: 1400px;
-	grid-gap: 24px;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin: 0 auto;
-	& > *{
-		flex:1;
-	}
+
 }
-.v-center {
+.v-center--f {
     align-self: center;
 }
 section{
@@ -166,9 +170,9 @@ section{
 	background:var(--p3);
 	margin-top: 32px;
 	clip-path: polygon(0px 0px, 25% 0px, calc(25% + 15px) 15px, calc(75% - 15px) 15px, 75% 0px, 100% 0px, 100% 100%, 60% 100%, calc(60% - 20px) calc(100% - 20px), calc(40% + 20px) calc(100% - 20px), 40% 100%, 0px 100%);
-	h2{
+	.h2{
 		text-align: center;
-		color:#fff;
+		
 		margin-top: 0;
 		font-size: 64px;
 		margin-bottom: 64px;
@@ -208,7 +212,7 @@ header{
 	0 1px 0px 10px inset var(--c5), 0 0 9px 19px var(--p3) inset,0 -40px 50px var(--c3) inset
 }
 
-ul{
+ul,ol{
 	padding: 0;
 	li{
 		list-style: none;

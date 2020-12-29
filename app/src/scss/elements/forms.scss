@@ -1,0 +1,114 @@
+/* Forms
+ ========================================================================== */
+label {
+	display: block;
+}
+
+label + input,
+label + textarea {
+	margin-top: 4px;
+}
+
+
+/* Buttons
+ ========================================================================== */
+ .btn{
+	padding: 16px 24px;
+	display: inline-block;
+	color:#fff;
+	font-weight: bold;
+	line-height: 1.25;
+	transition: $transition;
+	background: var(--g1);
+	&:hover{
+		background: var(--c5)
+	}
+	&.btn--white{
+		background: #fff;
+		border: 1px solid var(--c4);
+		color:#000;
+		
+		&:hover{
+			background: darken(#fff, 10%);
+		}
+	}
+	&.btn--tech{
+		position: relative;
+		background: transparent;
+		color:#fff;
+		z-index: 0;
+		 border:0 ;
+		animation: animateGlow4 1s linear infinite alternate;
+
+		&:hover{
+			//background: darken(#fff, 10%);
+		}
+		@extend %tech-b;
+	}
+	&.btn--ghost{
+		background: transparent;
+		position: relative;
+		z-index: 1;
+		//overflow: hidden;
+		margin: 4px;
+		border: 1px solid var(--c4);
+		&:hover{
+			background: var(--c4);
+		}
+	}
+ }
+.btn--tech-holder{
+	text-align: right;
+	display: block;
+
+		svg{
+		vertical-align: sub;
+		margin-right: 4px
+	}
+
+
+}
+
+.form-col{
+	display: flex;
+	label{
+		
+		width: 50%;
+		
+		&:first-child{
+			padding-right:24px ;
+		}
+		input{
+			width: 100%;
+		}
+	}
+}
+label{
+	font-size: 14px;
+	font-weight: bold;;
+	margin-bottom: 24px;
+	.req{
+		font-size: 12px;
+		margin-top: 4px;
+		span{
+			color: $neg;
+		}
+
+	}
+	span{
+			margin-bottom: 4px;
+			display: inline-block;
+		}
+}
+input{
+	box-sizing: border-box;
+	width: 100%;
+	background: $light;
+	border: 0;
+	padding: 8px 16px;
+}
+select{
+		background: $light;
+	border: 0;
+	padding: 8px 16px;
+}

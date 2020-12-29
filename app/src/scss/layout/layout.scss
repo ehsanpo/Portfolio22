@@ -1,0 +1,28 @@
+.bg-color-1 {
+	
+	background: var(--c3);
+	color: #fff;
+	a,h2,h3,h4 {
+		color: #fff;
+	}
+	
+}
+.bg-color-2{
+	background-color:var(--p3);
+	color: #fff;
+	a,h2,h3,h4 {
+		color: #fff;
+	}
+}
+.bg-color-3 {
+	
+	background: var(--darkblue);
+	a,h2,h3,h4 {
+		color: #fff;
+	}
+}
+::selection {
+    color: var(--c5);
+    background: var(--p1);
+    text-shadow: none;
+}

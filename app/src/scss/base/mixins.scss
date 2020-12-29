@@ -1,0 +1,228 @@
+
+%clippath {
+clip-path: polygon( 0px 0px, calc(100% - 0px) 0px, calc(100% - 0px) calc(100% - 16px), calc(60% + 16px) calc(100% - 16px), calc(60% - 0px) calc(100% - 0px), calc(40% + 0px) calc(100% - 0px), calc(40% - 16px) calc(100% - 16px), 0px calc(100% - 16px));
+}
+
+%clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+%v_c {
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	position: relative;
+}
+%max_w {
+	display: flex;
+	max-width: 1400px;
+	grid-gap: 24px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	& > *{
+		flex:1;
+	}
+	@media only screen and (max-width: $max-width) {
+		padding: 0 $pad_xs;
+	}
+	@media only screen and (max-width: $break-mid) {
+		padding: 0 $pad_xs;
+	}
+}
+%max_w_m {
+	width: $max-width_m;
+	max-width: 100%;
+	margin: 0 auto;
+}
+%visuallyhidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+/* Media querys */
+@mixin bp-large {
+	@media only screen and (min-width: 60em) {
+		@content;
+	}
+}
+@mixin bp-medium {
+	@media only screen and (min-width: 40em) {
+		@content;
+	}
+}
+@mixin bp-small {
+	@media only screen and (min-width: 30em) {
+		@content;
+	}
+}
+@mixin bp-max {
+	@media only screen and (min-width: $max-width) {
+		@content;
+	}
+}
+
+
+%block-pad {
+	padding: $block_pad_m 0;
+	@include bp-large {
+		padding: $block_pad 0;
+	}
+}
+
+
+%bg_cover{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+%anim-delay {
+	animation-name: fade-in;
+	animation-fill-mode: both;
+	animation-duration: 0.5s;
+	@for $i from 1 through 15 {
+		&:nth-of-type(#{$i}) {
+			animation-delay: #{0.3+ ($i)/30}s;
+		}
+	}
+}
+
+
+%tech{
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	&:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 50%;
+    right: 0px;
+    top: 0px;
+    background: var(--p1);
+    transition: $transition;
+    //transform: skewX(35deg);
+    transform-origin: right bottom;
+    z-index: -1;
+     animation:boxin2 300ms linear forwards;
+
+	}
+	&:before {
+	    content: '';
+	    position: absolute;
+	    width: 200%;
+	    height: 0%;
+	    right: 0px;
+	    bottom: 0px;
+	    background: var(--p1);
+	    transform: skewX(-35deg);
+	    transform-origin: right top;
+	    z-index: -1;
+	    animation:boxin 300ms linear forwards;
+	    transition: $transition;
+	}
+}
+%tech-b{
+	position: relative;
+	overflow: hidden;
+	//border-radius: 3px;
+	&:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 50%;
+    right: 0px;
+    top: 0px;
+    background: var(--c4);
+    transition: $transition;
+    //transform: skewX(35deg);
+    transform-origin: right bottom;
+    z-index: -1;
+     animation:boxin2 300ms linear forwards;
+
+	}
+	&:before {
+	    content: '';
+	    position: absolute;
+	    width: 200%;
+	    height: 0%;
+	    right: 0px;
+	    bottom: 0px;
+	    background: var(--c4);
+	    transform: skewX(-35deg);
+	    transform-origin: right top;
+	    z-index: -1;
+	    animation:boxin 300ms linear forwards;
+	    transition: $transition;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%; }
+  100% {
+    background-position: 200% 50%; } 
+}
+@keyframes animateGlow2 {
+  0% {
+    box-shadow: 0 0 20px rgba(0,0,0,0.2),0px -60px 50px -60px $c2,0px 60px 30px -60px $c2; }
+  100% {
+     box-shadow:  0px 17px 7px -9px #362f3466,0px -60px 10px -60px $c2,0px 60px 10px -60px$c3; } 
+}
+@keyframes animateGlow3 {
+  0% {
+    box-shadow: 0px -30px 30px -30px $c2,0px 30px 30px -30px $c2; }
+  100% {
+     box-shadow:  0px -30px 10px -30px $c2,0px 30px 10px -30px$c3; } 
+}
+
+@keyframes animateGlow4 {
+  0% {
+    box-shadow: -15px 0 13px -18px $c2,-15px 0 13px -18px $c2;  }
+  100% {
+     box-shadow:  -15px 0 13px -18px $c3,-15px 0 13px -18px $c3; } 
+}
+
+@keyframes animateGlow4-2 {
+  0% {
+    box-shadow: -15px 0 13px -18px $c4,-15px 0 13px -18px $c4; }
+  100% {
+     box-shadow:  -15px 0 13px -18px $c5,-15px 0 13px -18px $c5,;} 
+}
+
+@keyframes float {
+	0% {
+	
+		transform: translatey(0px);
+	}
+	50% {
+	
+		transform: translatey(-20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
