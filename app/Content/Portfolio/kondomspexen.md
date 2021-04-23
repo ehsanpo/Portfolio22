@@ -9,17 +9,16 @@ type: portfolio
 id: 280
 category:
     - Backend
-    - Design
-    - Front-end
     - Sysadmin
 tag:
+    - Web
+    - Wordpress
     - E-commerce
     - Maintenance
     - 'Solution Architecture'
     - Stripe
     - UX
-    - 'Web Development'
-    - Wordpress
+    
 case_link_url:
     - ''
 body_text:

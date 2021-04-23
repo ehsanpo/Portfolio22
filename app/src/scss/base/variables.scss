@@ -9,6 +9,33 @@ $c3: #7D112F;
 $c4: #8c8f98;
 $c5: #b0f000;
 $c6: #2b303b;
+
+
+html{
+	--p1:#2d3342;
+	--p2:#565c6d;
+	--p3:#040c1b;
+	--c1:#ff0066;
+	--c2:#800033;
+	--c3:#40001a;
+	--c4:#e6005c;
+	--c5:#c5003c;
+	--green: #41bf50;
+	--green2:#8bcc3b;
+	--yellow:#fef900;
+	--orange:#f59740;
+	--lighblue:#69f8ff;
+	--blue:#0040b0;
+	--darkblue:#1f0f57;
+	--gx: linear-gradient(220deg,var(--p3),var(--c5));
+	--g1: linear-gradient(220deg,var(--darkblue),var(--c5));
+	--g2: linear-gradient(220deg,var(--orange),var(--c5));
+	--g3: linear-gradient(220deg, var(--c1), var(--yellow));
+	--g4: linear-gradient(220deg, var(--p1), var(--p3));
+	--g5: linear-gradient(90deg, var(--c5) , var(--orange));
+	--block-h: 30vh;
+}
+
 //UX colours
 
 $dark:	#505050;
@@ -19,7 +46,7 @@ $neg	:#dc3545;
 
 
 //Grid
-$max-width: 1128px;
+$max-width: 1400px;
 $max-width_m: 720px;
 $max-width_n: 328px;
 

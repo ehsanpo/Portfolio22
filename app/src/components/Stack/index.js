@@ -1,18 +1,49 @@
+import React from "react";
+import "./stack.scss";
+import cs from "./cs.svg";
+import servers from "./servers.svg";
+import nodejs from "./nodejs-1.svg";
+import wordpress from "./wordpress-logo-button.svg";
 
+const Stack = ({ type = "nodejs" }) => {
+  const types = {
+    LNMP: {
+      headline: "LNMP",
+      tools: ["Linux", "Nginx", "Mysql", "PHP"],
+      icon: servers,
+    },
+    nodejs: {
+      headline: "Node.js",
+      tools: ["React", "Gastby", "Webpack", "MongoDb"],
+      icon: nodejs,
+    },
+    cloud: {
+      headline: "Cloud",
+      tools: ["AWS API Gateway", "AWS Dynamo DB", "Lambda", "Node.js"],
+      icon: cs,
+    },
+    wordpress: {
+      headline: "Wordpres",
+      tools: ["Blockpress Theme", "Content Blocks", "Sass", "Webpack"],
+      icon: wordpress,
+    },
+  };
+  let toRender = types[type];
 
-import React from 'react'
+  return (
+    <div className="stackholder">
+      <img alt="Node.js" src={toRender.icon} />
+      <h3>{toRender.headline}</h3>
 
-const Stack  = ({ className, children, type="button", cta=false, sec=false}) => {
-    return (
-        <div className="stacks">
-            <img alt="Node.js" data-aos="fade-up" data-aos-delay="300" src="https://ehsan.loc/site/uploads/2019/03/nodejs-1.svg" />
-            <h3 data-aos="fade-up" data-aos-delay="300" class="aos-init aos-animate">Node.js</h3>
-            <ul>
-                <li>React</li><li>MongoDb</li><li>Webpack</li><li>Gastby</li>
-            </ul>
-        </div>
-
-    );
+      <div className="stacks">
+        <ul>
+          {toRender.tools.map((t) => (
+            <li key={t}>{t}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 };
-  
+
 export default Stack;

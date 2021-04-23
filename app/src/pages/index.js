@@ -1,48 +1,85 @@
 import React from "react";
-// import InViewMonitor from "react-inview-monitor";
+import InViewMonitor from "react-inview-monitor";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import Button from "../components/Button";
+import Button from "../components/Button";
 // import Box from "../components/Card";
-// import Stack from "../components/Stack";
-// import Award from "../components/Award";
-// import Parallax from "../components/ParallaxImage";
+import Stack from "../components/Stack";
+import Award from "../components/Award";
+import Parallax from "../components/ParallaxImage";
 import Hero from "../components/Hero";
-import PortfolioBlock from "../components/PortfolioBlock"
+import PortfolioBlock from "../components/PortfolioBlock";
+import { graphql } from "gatsby";
 
-const IndexPage = ({data}) => {
-  
-  const portfolioBlockData = data.allMarkdownRemark.edges
-  return(
+
+// 3, 10
+const IndexPage = ({ data }) => {
+  const portfolioBlockData = data.allMarkdownRemark.edges;
+  return (
     <Layout>
       <SEO title="Home" />
       <Hero />
-      <PortfolioBlock data={portfolioBlockData}/>
+      <PortfolioBlock data={portfolioBlockData} onHome />
+   
+      <section>
+        <InViewMonitor
+          intoViewMargin="6%"
+          classNameNotInView="vis-hidden"
+          classNameInView="animated titleIn"
+          toggleClassNameOnInView
+        >
+          <h2 className="title red">dev Stacks</h2>
+        </InViewMonitor>
+
+        <div className="wrapper">
+          <Stack type="LNMP" />
+          <Stack type="nodejs" />
+          <Stack type="cloud" />
+          <Stack type="wordpress" />
+        </div>
+        <div className="center">
+          <InViewMonitor
+            intoViewMargin="3%"
+            classNameNotInView="vis-hidden"
+            classNameInView="animated titleIn"
+            toggleClassNameOnInView
+          >
+            <Button sec>see Skills</Button>
+          </InViewMonitor>
+        </div>
+      </section>
+      <Parallax filename="QX17.jpg" />
+
+      <Award />
+      <Parallax filename="QX10.jpg" />
     </Layout>
-)};
+  );
+};
 
 export default IndexPage;
 
-
 export const query = graphql`
- query PortfolioBlock{
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {onHome: {eq: true}}}) {
-    edges {
-      node {
-        id
-        __typename
-        frontmatter {
-          title
-          category
-          tag
-          permalink
+  query PortfolioBlock {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { onHome: { eq: true } } }
+    ) {
+      edges {
+        node {
           id
-          date(formatString: "MMMM DD, YYYY")
+          __typename
+          frontmatter {
+            title
+            category
+            tag
+            permalink
+            id
+            logo
+            date(formatString: "MMMM DD, YYYY")
+          }
+          excerpt(pruneLength: 280)
         }
-        excerpt(pruneLength: 280)
       }
     }
   }
-}
-
 `;

@@ -93,42 +93,4 @@ export default IndexPage;
     // </section>
     // <Parallax filename="bg1.jpg" />
 
-    // <section>
-    //   <InViewMonitor
-    //     intoViewMargin="8%"
-    //     classNameNotInView="vis-hidden"
-    //     classNameInView="animated titleIn"
-    //     toggleClassNameOnInView
-    //   >
-    //     <h2 className="blue">Awards</h2>
-    //   </InViewMonitor>
-    //   <div className="wrapper">
-    //     <Award
-    //       img={{}}
-    //       headline="Svenska design"
-    //       description="Gold Category Digital Design"
-    //       link="/portfolio/malmo-saluhall/"
-    //     ></Award>
-    //     <Award
-    //       img={{}}
-    //       headline="Svenska design"
-    //       description="Gold Category Digital Design"
-    //       link="/portfolio/malmo-saluhall/"
-    //     ></Award>
-    //     <Award
-    //       img={{}}
-    //       headline="Svenska design"
-    //       description="Gold Category Digital Design"
-    //       link="/portfolio/malmo-saluhall/"
-    //     ></Award>
-    //     <Award
-    //       img={{}}
-    //       headline="Svenska design"
-    //       description="Gold Category Digital Design"
-    //       link="/portfolio/malmo-saluhall/"
-    //     ></Award>
-    //   </div>
-    //   <div className="center">
-    //     <Button className="btn--3">About Ehsan</Button>
-    //   </div>
-    // </section>
+    

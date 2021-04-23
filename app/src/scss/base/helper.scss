@@ -14,3 +14,15 @@
 .v-center {
 	@extend %v_c;
 }
+.v-center--f {
+    align-self: center;
+}
+.yellow{
+	color: var(--yellow);
+}
+.blue{
+	color: var(--blue-color);
+}
+.red {
+	color: var(--c5);
+}

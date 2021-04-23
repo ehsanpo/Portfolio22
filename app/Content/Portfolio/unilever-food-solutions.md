@@ -7,10 +7,10 @@ author: Ehsan
 excerpt: ''
 type: portfolio
 id: 335
+agancy: Guts & Glory
 category:
     - Backend
     - Front-end
-    - Sysadmin
 tag:
     - CSS
     - HTML

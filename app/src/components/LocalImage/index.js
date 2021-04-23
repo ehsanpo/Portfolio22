@@ -1,55 +1,70 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
-import { Parallax, Background } from 'react-parallax';
+import BackgroundImage from "gatsby-background-image";
 
 const LocalImage = ({
   filename,
   alt,
   style = {},
   className = "",
-  caption = null
+  caption = null,
+  width ="100%",
+  height="auto",
+  background = false,
+  children,
 }) => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile {
+        images: allFile(filter: {extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }}) {
           edges {
             node {
               relativePath
               name
               childImageSharp {
-                sizes(maxWidth: 1200) {
-                  ...GatsbyImageSharpSizes
-                }
+                fluid(maxWidth : 2500) {
+                  ...GatsbyImageSharpFluid
+              }
               }
             }
           }
         }
       }
     `}
+    
     render={(data) => {
+      //console.log('image', data);
       const image = data.images.edges.find((n) => {
         return n.node.relativePath.includes(filename);
       });
       if (!image) {
         return null;
       }
-
-      const imageSizes = image.node.childImageSharp.sizes;
+      const imageFluid = image.node.childImageSharp.fluid;
+     
+      if(background){
+        return (
+          <BackgroundImage
+            Tag="div"
+            className={className}
+            fluid={imageFluid}
+            backgroundColor={`#040e18`}
+          >
+            {children}
+          </BackgroundImage>
+        )
+      }
       return (
-        <div className={className}>
           <Img
-            imgStyle={{ objectFit: "contain" }}
+            imgStyle={{ objectFit: "cover" }}
+            className={className}
             alt={alt}
-            sizes={imageSizes}
+            fluid={imageFluid}
             width={width}
             height={height}
             style={style}
-            className="aligncenter"
           />
-          {caption && <figcaption>{caption}</figcaption>}
-        </div>
       );
     }}
   />

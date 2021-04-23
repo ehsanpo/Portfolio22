@@ -5,7 +5,7 @@ status: publish
 permalink: /portfolio/blackjack
 author: Ehsan
 excerpt: ''
-type: portfolio
+type: lab
 id: 905
 category:
     - Lab

@@ -8,7 +8,6 @@ excerpt: ''
 type: portfolio
 id: 307
 category:
-    - Backend
     - Design
     - Front-end
     - Sysadmin
