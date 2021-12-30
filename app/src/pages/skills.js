@@ -10,7 +10,7 @@ import { defaults } from "react-chartjs-2";
 // defaults.global.defaultFontColor = "rgba(255,255, 255, 1)";
 import chart_data from "../data/skills-data";
 import Button from "../components/Button";
-
+import Stack from "../components/Stack";
 
 console.log("chart_data", chart_data);
 
@@ -20,21 +20,19 @@ const borderColor = "rgb(255, 255, 255)";
 const options = {
   responsive: true,
   // backgroundColor:"#fff",
-  // pointBorderColor: "#fff",
+   pointBorderColor: "#fff",
   scale: {
     ticks: {
       showLabelBackdrop: true,
       //backdropColor: "#fef900",
-      //fontColor: "#ffffff",
+      fontColor: "#ffffff",
       //backgroundColor: "#fef900",
-     
       min: 0,
       max: 10,
       stepSize: 2,
     },
   },
   scales: {
-    
     r: {
       title:{
         text:"red"
@@ -45,11 +43,11 @@ const options = {
       },
     },
   },
-  // pointLabelFontColor: "rgba(255,255,255,1)",
+   pointLabelFontColor: "rgba(255,255,255,1)",
 
   legend: {
     labels: {
-      color: "#000",
+      color: "#fff",
     },
   },
 };
@@ -117,14 +115,21 @@ const Skills = () => {
                 }}
                 key={skill.slug}
               >
-                {" "}
-                {skill.slug}{" "}
+                {skill.slug}
               </Button>
             ))}
             <div className="radarholder">
               <Radar data={skdata} options={options} />
             </div>
           </div>
+        </div>
+      </section>
+      <section className="no-bg">
+      <div className="wrapper">
+          <Stack type="LNMP" />
+          <Stack type="nodejs" />
+          <Stack type="cloud" />
+          <Stack type="wordpress" />
         </div>
       </section>
     </Layout>

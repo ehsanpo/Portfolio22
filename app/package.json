@@ -38,6 +38,7 @@
     "sass": "^1.32.12"
   },
   "devDependencies": {
-    "@maferland/spotify-react": "^0.3.0"
+    "@maferland/spotify-react": "^0.3.0",
+    "html-to-react": "^1.4.7"
   }
 }

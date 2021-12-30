@@ -7,7 +7,6 @@ const Header = ({ siteTitle }) => (
   className="header"
     style={{
       background: `var(--p3)`,
-      
     }}
   >
     <div
@@ -16,7 +15,6 @@ const Header = ({ siteTitle }) => (
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
-      
     >
       <nav>
         <ol>
@@ -35,11 +33,11 @@ const Header = ({ siteTitle }) => (
               Music
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link className="btn--link" to="/blog">
               Writing
             </Link>
-          </li> */}
+          </li>
           <li>
             <Link className="btn--link" to="/skills">
              Skills

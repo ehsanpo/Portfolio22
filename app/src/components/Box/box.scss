@@ -2,7 +2,11 @@
 	font-family:"Tomorrow";
 	position: relative;
 	min-width: 20%;
+	max-width: 50%;
 	font-weight: normal;
+	&.box--max{
+		max-width: 100%;
+	}
 	.header{
 		font-size: 16px;
 		background: var(--boxColor);

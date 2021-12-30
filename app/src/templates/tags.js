@@ -5,7 +5,6 @@ const Tag = ({ pageContext }) => {
 console.log( pageContext)
 
     const { posts, tagName } = pageContext;
-    
     const upperTag = tagName.charAt(0).toUpperCase() + tagName.slice(1);
     return (
         <div>

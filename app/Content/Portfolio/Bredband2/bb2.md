@@ -1,4 +1,5 @@
 ---
+onHome: true
 title: 'Bredband2'
 date: '2019-03-28T12:54:27+00:00'
 status: publish
@@ -27,7 +28,7 @@ logo:
     - 'logo.png'
 video:
 bilder:
-    - '1.png'
+    - '1.jpg'
 port_date:
     - '2021'
 

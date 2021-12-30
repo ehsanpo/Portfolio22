@@ -127,8 +127,8 @@ const IndexPage = ({ data, pageContext }) => {
               </div>
             </div>
 
-            <div>
-              <div>
+       
+           
                 <div className="box">
                   <span className="box__glitch"></span>
                   <div className="header">
@@ -143,10 +143,10 @@ const IndexPage = ({ data, pageContext }) => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              
+         
 
-            <div className="box">
+            <div className="box box--max">
               <span className="box__glitch"></span>
               <div className="header">
                 <span>02</span> Tech
@@ -187,7 +187,7 @@ const IndexPage = ({ data, pageContext }) => {
           <div className="portfolioBlockBody wrapper">
             <div>
               <br />
-              <div className="box">
+              <div className="box box--max">
                 <div className="header">
                   <span>5</span> Gallery
                 </div>
