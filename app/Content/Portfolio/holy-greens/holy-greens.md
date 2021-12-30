@@ -33,8 +33,7 @@ logo:
 video:
     - ''
 bilder:
-    - 'hoolygreens -fsc.png'
-    - 'hoolygreens -fsc.png'
+    - 'hoolygreens -fsc.jpg'
 port_date:
     - '2018'
 ---
