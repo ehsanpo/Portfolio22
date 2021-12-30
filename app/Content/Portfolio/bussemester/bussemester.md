@@ -24,14 +24,14 @@ client:
 tagline:
     - 'Kom närmare med bussen'
 background_image:
-    - 'bussemester-bg'
+    - 'bussemester-bg.jpg'
 logo:
-    - 'bussemester-logo'
+    - 'bussemester-logo.png'
 video:
     - ''
 bilder:
-    - 'bussemester-1'
-    - 'bussemester-2'
+    - 'bussemester-1.jpg'
+    - 'bussemester-2.jpg'
 port_date:
     - '2018'
 

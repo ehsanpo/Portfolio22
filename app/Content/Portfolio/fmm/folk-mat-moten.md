@@ -28,13 +28,13 @@ client:
 tagline:
     - 'Konferens i Malmö som överträffar dina förväntningar!'
 background_image:
-    - 'fmm-bg'
+    - 'fmm-bg.jpg'
 logo:
-    - 'fmm-logo'
+    - 'fmm-logo.png'
 video:
     - ''
 bilder:
-    - 'fmm-1'
+    - 'fmm-1.jpg'
 port_date:
     - '2018'
 ---

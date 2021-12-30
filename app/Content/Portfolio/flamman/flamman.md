@@ -25,13 +25,13 @@ client:
 tagline:
     - 'Socialt Förebyggande Centrum'
 background_image:
-    - 'flamman-top'
+    - 'flamman-top.jpg'
 logo:
-    - 'flamman-logo'
+    - 'flamman-logo.png'
 video:
     - ''
 bilder:
-    - 'flamman-1'
+    - 'flamman-1.jpg'
 port_date:
     - '2019'
 

@@ -10,6 +10,7 @@
 }
 .wrapper-m {
 	@extend %max_w_m;
+	flex: none;
 }
 .v-center {
 	@extend %v_c;

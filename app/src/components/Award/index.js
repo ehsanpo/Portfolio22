@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import Img from "gatsby-plugin-image";
 import "./style.scss";
 import InViewMonitor from "react-inview-monitor";
 import Button from "../Button";
@@ -49,7 +49,7 @@ const Award = () => {
             classNameInView="animated titleIn"
             toggleClassNameOnInView
           >
-            <Img fixed={data.image2.childImageSharp.fixed} alt="" />
+            <img fixed={data?.image2?.childImageSharp.fixed} alt="" />
             <div class="content">
               <h3>Svenska design</h3>
               Gold Category Digital Design
@@ -69,7 +69,7 @@ const Award = () => {
             classNameInView="animated titleIn"
             toggleClassNameOnInView
           >
-            <Img fixed={data.image1.childImageSharp.fixed} alt="" />
+            <img fixed={data.image1?.childImageSharp.fixed} alt="" />
             <div class="content">
               <h3>Cannes lions</h3>
               Silver Lion in Promo & Activation, Bronze Lion in Cyber &
@@ -90,7 +90,7 @@ const Award = () => {
             classNameInView="animated titleIn"
             toggleClassNameOnInView
           >
-            <Img fixed={data.image3.childImageSharp.fixed} alt="" />
+            <img fixed={data.image3?.childImageSharp.fixed} alt="" />
             <div class="content">
               <h3>Guldägget</h3>
               Gold Category PR & Silver Categories Digital and Alternative Media

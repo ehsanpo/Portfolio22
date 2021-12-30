@@ -3,16 +3,16 @@
 
 @font-face {
   font-family: "Tomorrow";
-  src: url("../../static/fonts/Tomorrow-Regular.woff2") format("woff2"),
-    url("../../static/fonts/Tomorrow-Regular.woff") format("woff"),
-    url("../../static/fonts/Tomorrow-Regular.ttf") format("opentype");
+  src: url("../fonts/Tomorrow-Regular.woff2") format("woff2"),
+    url("../fonts/Tomorrow-Regular.woff") format("woff"),
+    url("../fonts/Tomorrow-Regular.ttf") format("opentype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "hudson";
-  src: url("../../static/fonts/HudsonNY.woff2") format("woff2"),
-    url("../../static/fonts/HudsonNY.woff") format("woff");
+  src: url("../fonts/HudsonNY.woff2") format("woff2"),
+    url("../fonts/HudsonNY.woff") format("woff");
   font-style: normal;
   font-weight: 600;
 }
@@ -25,7 +25,7 @@ html {
   background: #2e3443;
 }
 body {
-  line-height: 1.5;
+  line-height: 1.7;
   background: var(--gx);
   background-attachment: fixed;
   color: #fff;
@@ -99,7 +99,7 @@ h3 {
   font-size: 24px;
   line-height: 1.21;
   letter-spacing: -0.5px;
-  margin-bottom: 16px;
+  margin: 16px 0;
   font-weight: bold;
 }
 

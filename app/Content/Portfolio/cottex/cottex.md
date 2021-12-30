@@ -26,14 +26,14 @@ client:
 tagline:
     - 'En bra lampa ska inte kosta skjortan'
 background_image:
-    - 'cottex-bg'
+    - 'cottex-bg.jpg'
 logo:
     - 'cottex-logo.png'
 video:
     - ''
 bilder:
-    - 'cottex-1'
-    - 'cottex-2'
+    - 'cottex-1.jpg'
+    - 'cottex-2.png'
 port_date:
     - '2017'
 

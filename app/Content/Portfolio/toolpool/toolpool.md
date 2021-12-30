@@ -23,9 +23,9 @@ logo:
 video:
     - 'https://www.youtube.com/watch?v=V8zOcBKLfko'
 bilder:
-    - 'toolpool-top'
-    - 'toolpool-1'
-    - 'toolpool-3'
+    - 'toolpool-top.jpg'
+    - 'toolpool-1.jpg'
+    - 'toolpool-3.jpg'
 
 tagline:
     - 'ToolPool is like a carpool, but with tools and it’s free.'

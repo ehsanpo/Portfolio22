@@ -2,10 +2,12 @@ import React, { useRef, useState, useEffect } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { graphql, Link } from "gatsby";
-import LocalImage from "../components/LocalImage";
 import Button from "../components/Button";
+import LocalImage from "../components/LocalImage";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data, pageContext }) => {
+
   const portfolioBlockData = data.markdownRemark.frontmatter;
   const portfolioBlockBody = data.markdownRemark.html;
   const [headerClose, setHeaderClose] = useState("");
@@ -57,7 +59,9 @@ const IndexPage = ({ data, pageContext }) => {
           </div>
           <div className="portfolio-header-mid v-center">
             <div className="portfolio-topImage">
-              <LocalImage filename={portfolioBlockData.logo} />
+              {portfolioBlockData.logo && (
+              <GatsbyImage  objectFit="contain" alt="test" className="portfolio-image" image={portfolioBlockData.logo[0].childImageSharp.gatsbyImageData} />
+              )}
             </div>
             <h2 className="display">{portfolioBlockData.title}</h2>
             <h3>{portfolioBlockData.tagline}</h3>
@@ -71,15 +75,9 @@ const IndexPage = ({ data, pageContext }) => {
                     Visit Site
                   </Button>
                 )}
-                
                 </div>
           </div>
-          <LocalImage
-            filename={portfolioBlockData.background_image}
-            className="portfolio-image"
-            background
-            style={{ height: "100%" }}
-          ></LocalImage>
+          <GatsbyImage  alt="test" className="portfolio-image" image={portfolioBlockData.background_image[0].childImageSharp.gatsbyImageData} />
 
           <div className="portfolio-header-bot">
             <div className="wrapper">
@@ -145,7 +143,6 @@ const IndexPage = ({ data, pageContext }) => {
                     </div>
                   </div>
                 </div>
-               
               </div>
             </div>
 
@@ -198,7 +195,7 @@ const IndexPage = ({ data, pageContext }) => {
                 <hr />
                 <div className="box-wrapper">
                   {portfolioBlockData.bilder.map((bild) => (
-                    <LocalImage key={bild} filename={bild} />
+                    <GatsbyImage key={bild.id} alt="test" image={bild.childImageSharp.gatsbyImageData} />
                   ))}
                 </div>
               </div>
@@ -224,7 +221,6 @@ export const query = graphql`
         client
         title
         permalink
-        body_text
         case_link_url
         category
         tag
@@ -233,9 +229,34 @@ export const query = graphql`
         tagline
         port_date
         agancy
-        background_image
-        logo
-        bilder
+        background_image{
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              width: 1200
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF])
+          }
+        }
+        logo{
+          childImageSharp {
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 350
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF])
+          }
+        }
+        bilder{
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              width: 1200
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF])
+          }
+          id
+        }
       }
     }
   }

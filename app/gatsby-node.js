@@ -1,61 +1,147 @@
-const { createFilePath } = require(`gatsby-source-filesystem`);
-const path = require(`path`);
+const path = require('path');
 
-// exports.onCreateNode = ({ node, getNode, actions }) => {
-//     const { createNodeField } = actions;
-//     if (node.internal.type === `MarkdownRemark`) {
-//       const slug = createFilePath({
-//         node,
-//         getNode,
-//         basePath: `portfolio`
-//       })
-//       createNodeField({
-//         node,
-//         name: `slug`,
-//         value: `${slug}`
-//       });
-//     }
-//   };
-
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const result = await graphql(`
-    query {
-      allMarkdownRemark(filter: {frontmatter: {type: {in: "portfolio"}}}) {
-        edges {
-          next {
-            frontmatter {
-              title
-              permalink
+
+  return new Promise((resolve, reject) => {
+    const postTemplate = path.resolve('src/templates/post.js');
+    const portfolioTemplate = path.resolve('src/templates/portfolio.js');
+    const tagPage = path.resolve('src/templates/tags-page.js');
+    const tagPosts = path.resolve('src/templates/tags.js');
+
+    resolve(
+      graphql(
+        `
+          query {
+            allMarkdownRemark(
+              sort: { order: ASC, fields: [frontmatter___date] }
+            ) {
+              edges {
+                node {
+                  frontmatter {
+                    permalink
+                    title
+                    tag
+                    category
+                    type
+                  }
+                }
+              }
             }
           }
-          previous {
-            frontmatter {
-              title
-              permalink
-            }
-          }
-          node {
-            frontmatter {
-              permalink
-            }
-          }
+        `
+      ).then(result => {
+        if (result.errors) {
+          return reject(result.errors);
         }
-      }
-    }
-  `);
-  result.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
-    createPage({
-      path: node.frontmatter.permalink,
-      component: path.resolve(`./src/templates/portfolio.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        permalink: node.frontmatter.permalink,
-        type_: node.frontmatter.type,
-        next,
-        previous,
-      },
-    });
+
+        const posts = result.data.allMarkdownRemark.edges;
+
+        const postsByTag = {};
+        // create tags page
+        posts.forEach(({ node }) => {
+          if (node.frontmatter.tag) {
+            node.frontmatter.tag.forEach(tag => {
+              if (!postsByTag[tag.toLowerCase()]) {
+                postsByTag[tag.toLowerCase()] = [];
+              }
+
+              postsByTag[tag.toLowerCase()].push(node);
+            });
+          }
+        });
+
+        const tags = Object.keys(postsByTag);
+
+        createPage({
+          path: '/tags',
+          component: tagPage,
+          context: {
+            tags: tags.sort(),
+          },
+        });
+
+        //create tags
+        tags.forEach(tagName => {
+          const posts = postsByTag[tagName];
+
+          createPage({
+            path: `/tags/${tagName}`,
+            component: tagPosts,
+            context: {
+              posts,
+              tagName,
+            },
+          });
+        });
+
+        const postsByCat = {};
+        // create cat page
+        posts.forEach(({ node }) => {
+          if (node.frontmatter.category) {
+            node.frontmatter.category.forEach(cat => {
+              if (!postsByCat[cat.toLowerCase()]) {
+                postsByCat[cat.toLowerCase()] = [];
+              }
+
+              postsByCat[cat.toLowerCase()].push(node);
+            });
+          }
+        });
+
+        const cats = Object.keys(postsByCat);
+
+        createPage({
+          path: '/category',
+          component: tagPage,
+          context: {
+            tags: cats.sort(),
+          },
+        });
+
+        //create cats
+        cats.forEach(tagName => {
+          const posts = postsByCat[tagName];
+
+          createPage({
+            path: `/category/${tagName}`,
+            component: tagPosts,
+            context: {
+              posts,
+              tagName,
+            },
+          });
+        });
+
+        //create posts
+        posts.forEach(({ node }, index) => {
+          console.log( node.frontmatter.type, "type" )
+          const path = node.frontmatter.permalink;
+          const type = node.frontmatter.type 
+          const prev = index === 0 ? null : posts[index - 1].node;
+          const next = index === posts.length - 1 ? null : posts[index + 1].node;
+
+          createPage({
+            path,
+            component: type == "post" ? postTemplate : portfolioTemplate,
+            context: {
+              pathSlug: path,
+              permalink: path,
+              prev,
+              next,
+            },
+          });
+        });
+      })
+    );
+  });
+};
+
+/* Allows named imports */
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
   });
 };

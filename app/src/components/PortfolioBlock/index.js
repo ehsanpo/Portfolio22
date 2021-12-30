@@ -5,15 +5,19 @@ import Button from "../Button";
 
 const Index = ({ data, onHome = false }) => {
   return (
-    <section>
-      <InViewMonitor
-        intoViewMargin="8%"
-        classNameNotInView="vis-hidden"
-        classNameInView="animated titleIn"
-        toggleClassNameOnInView
-      >
-        <h2 className="title blue">Selceted Works</h2>
-      </InViewMonitor>
+    <section className={`${!onHome && "no-bg"}`}>
+      {onHome && (
+        <>
+          <InViewMonitor
+            intoViewMargin="8%"
+            classNameNotInView="vis-hidden"
+            classNameInView="animated titleIn"
+            toggleClassNameOnInView
+          >
+            <h2 className="title blue">Selceted Works</h2>
+          </InViewMonitor>
+        </>
+      )}
 
       <div className="wrapper">
         {data.map((Onode) => {

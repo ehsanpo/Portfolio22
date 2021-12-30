@@ -26,13 +26,13 @@ client:
 tagline:
     - 'Allt inom reklam, kommunikation och design'
 background_image:
-    - 'gg-bg'
+    - 'gg-bg.png'
 logo:
-    - 'gg-logo'
+    - 'gg-logo.png'
 video:
     - ''
 bilder:
-    - 'gg-1'
+    - 'gg-1.jpg'
 port_date:
     - '2019'
 

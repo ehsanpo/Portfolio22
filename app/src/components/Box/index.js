@@ -3,19 +3,22 @@ import { Link } from "gatsby";
 import "./box.scss";
 import LocalImage from "../LocalImage";
 
+function onlyCapitalLetters(str) {
+  return (str.match(/[A-Z]/g) || []).join('');
+}
+
+
 const Box = ({ node }) => {
   const { id, title, tag, permalink, category, logo } = node;
-  console.log(node, "node");
   return (
     <Link to={permalink} className="box">
       <span className="box__glitch"></span>
       <div className="header">
         <span>
           {id}
-          {""}
         </span>{" "}
         {category.map((cat) => (
-          <>{`${cat} `}</>
+          <>{onlyCapitalLetters(cat)} </>
         ))}
       </div>
       <hr />

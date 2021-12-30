@@ -25,13 +25,13 @@ client:
 tagline:
     - 'Gör VVS enklare för dig!'
 background_image:
-    - 'carpings-bg'
+    - 'carpings-bg.jpg'
 logo:
-    - 'carpings-logo'
+    - 'carpings-logo.png'
 video:
     - ''
 bilder:
-    - 'carpings-1'
+    - 'carpings-1.jpg'
 port_date:
     - '2019'
 ---

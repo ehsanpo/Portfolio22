@@ -25,7 +25,7 @@ client:
 tagline:
     - 'Hållbarhetsredovisning 2016'
 background_image:
-    - 'harbarhett-top-2'
+    - 'harbarhett-top.jpg'
 logo:
     - 'hallbarhet-logo.png'
 video:

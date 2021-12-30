@@ -27,17 +27,14 @@ tagline:
 background_image:
     - 'bym-bg.png'
 logo:
-    - 'bym-logo'
+    - 'bym-logo.png'
 video:
     - ''
 bilder:
-    - 'bym-2'
-    - 'bym-1'
+    - 'bym-2.jpg'
+    - 'bym-1.jpg'
 port_date:
     - '2009'
-bilder_0_bild:
-    - '847'
-side_image:
-    - ''
+
 ---
 

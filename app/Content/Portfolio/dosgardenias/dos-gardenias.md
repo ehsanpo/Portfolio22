@@ -24,13 +24,13 @@ client:
 tagline:
     - 'The addictive pod of the necessities of life.'
 background_image:
-    - 'dosgardenias-bg'
+    - 'dosgardenias-bg.jpg'
 logo:
-    - 'dosgardenias-logo'
+    - 'dosgardenias-logo.png'
 video:
     - ''
 bilder:
-    - 'dosgardenias-1'
+    - 'dosgardenias-1.png'
 port_date:
     - '2019'
 ---

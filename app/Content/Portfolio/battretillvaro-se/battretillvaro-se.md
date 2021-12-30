@@ -24,11 +24,11 @@ tagline:
 background_image:
     - 'btv-bg.png'
 logo:
-    - 'btv-logo'
+    - 'btv-logo.png'
 video:
     - ''
 bilder:
-    - 'btv-1'
+    - 'btv-1.png'
 port_date:
     - '2018'
 

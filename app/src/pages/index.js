@@ -20,15 +20,14 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <Hero />
       <PortfolioBlock data={portfolioBlockData} onHome />
-   
-      <section>
+      <section className="no-bg">
         <InViewMonitor
           intoViewMargin="6%"
           classNameNotInView="vis-hidden"
           classNameInView="animated titleIn"
           toggleClassNameOnInView
         >
-          <h2 className="title red">dev Stacks</h2>
+        <h2 className="title red">Developer Stacks</h2>
         </InViewMonitor>
 
         <div className="wrapper">
@@ -74,7 +73,11 @@ export const query = graphql`
             tag
             permalink
             id
-            logo
+            logo {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
             date(formatString: "MMMM DD, YYYY")
           }
           excerpt(pruneLength: 280)

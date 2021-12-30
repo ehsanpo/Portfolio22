@@ -23,13 +23,13 @@ client:
 tagline:
     - 'Alltid bra Energi'
 background_image:
-    - ''
+    - 'oresundskraft.jpg'
 logo:
-    - 'braenergi-logo'
+    - 'braenergi-logo.png'
 video:
     - ''
 bilder:
-    - 'braenergi-1'
+    - 'braenergi-1.jpg'
 port_date:
     - '2017'
 ---

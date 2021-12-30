@@ -23,13 +23,13 @@ client:
 tagline:
     - 'Biltvätt Malmö'
 background_image:
-    - 'bilcleaniken-top'
+    - 'bilcleaniken-top.jpg'
 logo:
-    - 'bilcleaniken-logo'
+    - 'bilcleaniken-logo.png'
 video:
     - 'https://www.youtube.com/watch?v=UayOSFG0tUE'
 bilder:
-    - 'bilcleaniken-1'
+    - 'bilcleaniken-1.png'
 port_date:
     - '2019'
 ---

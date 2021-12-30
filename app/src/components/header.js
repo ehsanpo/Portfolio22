@@ -31,17 +31,22 @@ const Header = ({ siteTitle }) => (
             </Link>
           </li>
           <li>
-            <Link className="btn--link" to="/blog">
+            <Link className="btn--link" to="/music">
               Music
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link className="btn--link" to="/blog">
               Writing
             </Link>
+          </li> */}
+          <li>
+            <Link className="btn--link" to="/skills">
+             Skills
+            </Link>
           </li>
           <li>
-            <Link className="btn--link" to="/blog">
+            <Link className="btn--link" to="/about">
               About
             </Link>
           </li>
