@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'gatsby';
 
 const Tag = ({ pageContext }) => {
-console.log( pageContext)
+// console.log( pageContext)
 
     const { posts, tagName } = pageContext;
     const upperTag = tagName.charAt(0).toUpperCase() + tagName.slice(1);

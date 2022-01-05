@@ -12,9 +12,9 @@ import chart_data from "../data/skills-data";
 import Button from "../components/Button";
 import Stack from "../components/Stack";
 
-console.log("chart_data", chart_data);
+//console.log("chart_data", chart_data);
 
-const bgcolor = "rgba(254, 48, 72, 0.3)";
+const bgcolor = "rgba(254, 48, 72, 0.8)";
 const borderColor = "rgb(255, 255, 255)";
 
 const options = {

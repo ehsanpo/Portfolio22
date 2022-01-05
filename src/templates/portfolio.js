@@ -37,8 +37,8 @@ const IndexPage = ({ data, pageContext }) => {
     }, 1000);
   }, []);
 
-  console.log(data);
-  console.log(pageContext);
+  // console.log(data);
+  // console.log(pageContext);
   return (
     <Layout>
       <SEO title={portfolioBlockData.title} />

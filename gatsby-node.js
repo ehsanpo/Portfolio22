@@ -115,7 +115,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         //create posts
         posts.forEach(({ node }, index) => {
-          console.log( node.frontmatter.type, "type" )
+          //console.log ( node.frontmatter.type, "type" )
           const path = node.frontmatter.permalink;
           const type = node.frontmatter.type 
           const prev = index === 0 ? null : posts[index - 1].node;

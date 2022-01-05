@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const Post = ({ data, pageContext }) => {
-  console.log(data);
+  // console.log(data);
   const { next, prev } = pageContext;
   const { html, frontmatter, excerpt } = data.markdownRemark;
   const { title, tags, permalink, description } = frontmatter;

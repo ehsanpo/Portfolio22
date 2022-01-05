@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const Tags = ({ pageContext }) => {
   const { tags } = pageContext;
-console.log( pageContext)
+// console.log( pageContext)
   return (
     <div>
       {tags &&

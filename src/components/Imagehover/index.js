@@ -20,7 +20,7 @@ const LocalImage = ({
     const container = useRef();
 
     useEffect(() => {
-      console.log(container.current);
+      //console.log(container.current);
       new hoverEffect({
         parent: container.current,
         intensity: 0.3,
