@@ -1,13 +1,13 @@
 ---
 title: '10 awesome most have freeware for your Mac'
-date: '2019-04-15T13:35:41+00:00'
+date: '2019-04-15'
 status: publish
 permalink: /10-awesome-most-have-freeware-for-your-mac
 author: Ehsan
 excerpt: ''
 type: post
 id: 1001
-thumbnail: ../uploads/2019/04/238793.jpg
+thumbnail: ./images/238793.jpg
 category:
     - Lab
 tag:

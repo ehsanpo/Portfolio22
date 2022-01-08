@@ -4,6 +4,7 @@ module.exports = {
     title: `Ehsan Pourhadi`,
     description: `Digital Developer`,
     author: `@ehsanpo`,
+    siteUrl: `https://ehsanpo.github.io/Portfolio22`
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -43,7 +44,7 @@ module.exports = {
             options: {
               maxWidth: 750,
               quality: 90,
-              linkImagesToOriginal: true,
+              linkImagesToOriginal: false,
             },
           },
           'gatsby-remark-prismjs',

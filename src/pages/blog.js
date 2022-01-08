@@ -49,7 +49,7 @@ export const query = graphql`
   query AllPostBlock {
     allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "post" } } }
-      sort: { order: DESC, fields: frontmatter___port_date }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
         node {
@@ -61,7 +61,6 @@ export const query = graphql`
             tag
             permalink
             id
-            date(formatString: "MMMM DD, YYYY")
             type
           }
         }

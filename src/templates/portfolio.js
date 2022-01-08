@@ -7,11 +7,12 @@ import LocalImage from "../components/LocalImage";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data, pageContext }) => {
-
+  console.log(pageContext)
   const portfolioBlockData = data.markdownRemark.frontmatter;
   const portfolioBlockBody = data.markdownRemark.html;
   const [headerClose, setHeaderClose] = useState("");
 
+  console.log(pageContext)
   const { next, previous } = pageContext;
   const nextArticle = next && (
     <Link
@@ -214,8 +215,9 @@ const IndexPage = ({ data, pageContext }) => {
 export default IndexPage;
 
 export const query = graphql`
-  query SingelPortfolio($permalink: String!) {
-    markdownRemark(frontmatter: { permalink: { eq: $permalink } }) {
+  query SingelPortfolio($id: String!) {
+    markdownRemark( id: {eq:$id } ) {
+      id
       html
       frontmatter {
         client

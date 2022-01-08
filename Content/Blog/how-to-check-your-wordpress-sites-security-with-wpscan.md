@@ -1,6 +1,6 @@
 ---
 title: 'How to check your wordpress sites security with WPScan'
-date: '2020-01-09T13:55:08+00:00'
+date: '2020-01-09'
 status: publish
 permalink: /how-to-check-your-wordpress-sites-security-with-wpscan
 author: Ehsan

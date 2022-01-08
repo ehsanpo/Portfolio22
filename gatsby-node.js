@@ -17,7 +17,20 @@ exports.createPages = ({ graphql, actions }) => {
               sort: { order: ASC, fields: [frontmatter___date] }
             ) {
               edges {
+                next {
+                  frontmatter {
+                    permalink
+                    title
+                  }
+                }
+                previous {
+                  frontmatter {
+                    permalink
+                    title
+                  }
+                }
                 node {
+                  id
                   frontmatter {
                     permalink
                     title
@@ -39,87 +52,85 @@ exports.createPages = ({ graphql, actions }) => {
 
         const postsByTag = {};
         // create tags page
-        posts.forEach(({ node }) => {
-          if (node.frontmatter.tag) {
-            node.frontmatter.tag.forEach(tag => {
-              if (!postsByTag[tag.toLowerCase()]) {
-                postsByTag[tag.toLowerCase()] = [];
-              }
+        // posts.forEach(({ node }) => {
+        //   if (node.frontmatter.tag) {
+        //     node.frontmatter.tag.forEach(tag => {
+        //       if (!postsByTag[tag.toLowerCase()]) {
+        //         postsByTag[tag.toLowerCase()] = [];
+        //       }
 
-              postsByTag[tag.toLowerCase()].push(node);
-            });
-          }
-        });
+        //       postsByTag[tag.toLowerCase()].push(node);
+        //     });
+        //   }
+        // });
 
-        const tags = Object.keys(postsByTag);
+        // const tags = Object.keys(postsByTag);
 
-        createPage({
-          path: '/tags',
-          component: tagPage,
-          context: {
-            tags: tags.sort(),
-          },
-        });
+        // createPage({
+        //   path: '/tags',
+        //   component: tagPage,
+        //   context: {
+        //     tags: tags.sort(),
+        //   },
+        // });
 
-        //create tags
-        tags.forEach(tagName => {
-          const posts = postsByTag[tagName];
+        // //create tags
+        // tags.forEach(tagName => {
+        //   const posts = postsByTag[tagName];
 
-          createPage({
-            path: `/tags/${tagName}`,
-            component: tagPosts,
-            context: {
-              posts,
-              tagName,
-            },
-          });
-        });
+        //   createPage({
+        //     path: `/tags/${tagName}`,
+        //     component: tagPosts,
+        //     context: {
+        //       posts,
+        //       tagName,
+        //     },
+        //   });
+        // });
 
-        const postsByCat = {};
-        // create cat page
-        posts.forEach(({ node }) => {
-          if (node.frontmatter.category) {
-            node.frontmatter.category.forEach(cat => {
-              if (!postsByCat[cat.toLowerCase()]) {
-                postsByCat[cat.toLowerCase()] = [];
-              }
+        // const postsByCat = {};
+        // // create cat page
+        // posts.forEach(({ node }) => {
+        //   if (node.frontmatter.category) {
+        //     node.frontmatter.category.forEach(cat => {
+        //       if (!postsByCat[cat.toLowerCase()]) {
+        //         postsByCat[cat.toLowerCase()] = [];
+        //       }
 
-              postsByCat[cat.toLowerCase()].push(node);
-            });
-          }
-        });
+        //       postsByCat[cat.toLowerCase()].push(node);
+        //     });
+        //   }
+        // });
 
-        const cats = Object.keys(postsByCat);
+        // const cats = Object.keys(postsByCat);
 
-        createPage({
-          path: '/category',
-          component: tagPage,
-          context: {
-            tags: cats.sort(),
-          },
-        });
+        // createPage({
+        //   path: '/category',
+        //   component: tagPage,
+        //   context: {
+        //     tags: cats.sort(),
+        //   },
+        // });
 
-        //create cats
-        cats.forEach(tagName => {
-          const posts = postsByCat[tagName];
+        // //create cats
+        // cats.forEach(tagName => {
+        //   const posts = postsByCat[tagName];
 
-          createPage({
-            path: `/category/${tagName}`,
-            component: tagPosts,
-            context: {
-              posts,
-              tagName,
-            },
-          });
-        });
+        //   createPage({
+        //     path: `/category/${tagName}`,
+        //     component: tagPosts,
+        //     context: {
+        //       posts,
+        //       tagName,
+        //     },
+        //   });
+        // });
 
         //create posts
-        posts.forEach(({ node }, index) => {
-          //console.log ( node.frontmatter.type, "type" )
+        posts.forEach(({ node,  next, previous }, index) => {
+          console.log ( node , "type" )
           const path = node.frontmatter.permalink;
-          const type = node.frontmatter.type 
-          const prev = index === 0 ? null : posts[index - 1].node;
-          const next = index === posts.length - 1 ? null : posts[index + 1].node;
+          const type = node.frontmatter.type
 
           createPage({
             path,
@@ -127,8 +138,9 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               pathSlug: path,
               permalink: path,
-              prev,
+              previous,
               next,
+              id: node.id
             },
           });
         });

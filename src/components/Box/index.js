@@ -8,7 +8,7 @@ function onlyCapitalLetters(str) {
 }
 
 
-const Box = ({ node }) => {
+const Box = ({ node, image }) => {
   const { id, title, tag, permalink, category, logo } = node;
   return (
     <Link to={permalink} className="box">

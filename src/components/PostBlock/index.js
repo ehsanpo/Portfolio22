@@ -6,12 +6,10 @@ import Button from "../Button";
 const Index = ({ data, onHome = false }) => {
   return (
     <section className="no-bg">
-   
-
       <div className="wrapper">
         {data.map((Onode) => {
           const node = Onode.node.frontmatter;
-          return <Box key={node.id} node={node} />;
+          return <Box key={node.id} node={node} image />;
         })}
       </div>
       {onHome && (

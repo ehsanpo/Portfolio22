@@ -1,6 +1,6 @@
 ---
 title: 'What is Tor?'
-date: '2019-04-15T13:39:06+00:00'
+date: '2019-04-15'
 status: publish
 permalink: /what-is-tor
 author: Ehsan
@@ -26,26 +26,26 @@ Have you at any point needed to use the Internet secretly? Browser’s with “i
 
 ### Tor is an Internet networking protocol
 
-Intended to anonymize the data transferred crosswise over it. Utilizing Tor’s product will make it troublesome, if certainly feasible, for any snoops to see your webmail, look up your history, social media posts, or other activity online.  
+Intended to anonymize the data transferred crosswise over it. Utilizing Tor’s product will make it troublesome, if certainly feasible, for any snoops to see your webmail, look up your history, social media posts, or other activity online.
 They likewise won’t almost certainly tell which nation you’re in by breaking down your IP address, which can be valuable for journalists, activists, businesspeople and that’s only the tip of the iceberg.
 
 ### How does Tor work?
 
-The Tor system goes through the PC servers of thousands of volunteers spread all through the world. Your information is packaged into an encoded parcel when it enters the Tor network.  
-Tor strips away a piece of the packet’s header, which is a part of the data that could be utilized to learn things about the sender, for example, the operating system from which the message was sent.  
+The Tor system goes through the PC servers of thousands of volunteers spread all through the world. Your information is packaged into an encoded parcel when it enters the Tor network.
+Tor strips away a piece of the packet’s header, which is a part of the data that could be utilized to learn things about the sender, for example, the operating system from which the message was sent.
 At last, Tor scrambles and encrypts the remainder of the data, called the packet wrapper. Regular Internet doesn’t do this.
 
 ### How would I use Tor?
 
-To utilize Tor, you’ll need a client or software, that communicates with the Tor network.  
-The essential software is the Tor Browser Bundle, which the Tor Project distributes. The Tor Browser Bundle is preconfigured to send and get all Web traffic through the anonymizing Tor network.  
+To utilize Tor, you’ll need a client or software, that communicates with the Tor network.
+The essential software is the Tor Browser Bundle, which the Tor Project distributes. The Tor Browser Bundle is preconfigured to send and get all Web traffic through the anonymizing Tor network.
 You can design most programs to work with Tor utilizing the modules accessible in the pack. However, if you use Tor’s browser to get to the Internet, you don’t need to stress over the best possible setup.
 
 Alternatively, if you don’t know how to do this, or don’t want to get into the hassle of setting up a dark web, I offer Tor website setup, for all your needs.
 
 ### OSX easy Tor setup – Bash script
 
-You can save the script as tor.sh in your /usr/local/bin, make it executable with chmod + x and use it as a replacement for the general tor command.  
+You can save the script as tor.sh in your /usr/local/bin, make it executable with chmod + x and use it as a replacement for the general tor command.
 Then you can open a terminal and run
 
 ```

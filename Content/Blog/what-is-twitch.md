@@ -1,6 +1,6 @@
 ---
 title: 'What is Twitch?'
-date: '2019-06-09T14:54:42+00:00'
+date: '2019-06-09'
 status: publish
 permalink: /what-is-twitch
 author: Ehsan

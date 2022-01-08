@@ -1,6 +1,6 @@
 ---
 title: 'Getting started with React Native'
-date: '2020-01-14T11:34:32+00:00'
+date: '2020-01-14'
 status: publish
 permalink: /getting-started-with-react-native
 author: Ehsan

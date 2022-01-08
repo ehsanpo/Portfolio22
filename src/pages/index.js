@@ -60,7 +60,7 @@ export default IndexPage;
 export const query = graphql`
   query PortfolioBlock {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___port_date], order: DESC }
       filter: { frontmatter: { onHome: { eq: true } } }
     ) {
       edges {
@@ -78,7 +78,6 @@ export const query = graphql`
                 gatsbyImageData
               }
             }
-            date(formatString: "MMMM DD, YYYY")
           }
           excerpt(pruneLength: 280)
         }

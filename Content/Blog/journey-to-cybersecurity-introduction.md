@@ -1,6 +1,6 @@
 ---
-title: 'Journey to Cybersecurity &#8211; Introduction'
-date: '2020-01-10T11:00:32+00:00'
+title: 'Journey to Cybersecurity Introduction'
+date: '2020-01-10'
 status: publish
 permalink: /journey-to-cybersecurity-introduction
 author: Ehsan

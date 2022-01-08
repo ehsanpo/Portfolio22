@@ -6,8 +6,10 @@ import Parallax from "../components/ParallaxImage";
 import { graphql } from "gatsby";
 import PortfolioBlock from "../components/PortfolioBlock";
 
-const Portfolio = ({ data }) => (
-  <Layout>
+const Portfolio = ({ data }) => {
+  console.log(data)
+  return (
+    <Layout>
     <SEO title="Developer Portfolio" />
     <div className="page-header">
       <div className="wrapper">
@@ -34,7 +36,8 @@ const Portfolio = ({ data }) => (
     </section>
     <PortfolioBlock data={data.allMarkdownRemark.edges} />
   </Layout>
-);
+  )
+};
 export default Portfolio;
 
 export const query = graphql`
@@ -58,7 +61,6 @@ export const query = graphql`
                 gatsbyImageData
               }
             }
-            date(formatString: "MMMM DD, YYYY")
             type
           }
         }
