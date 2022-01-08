@@ -14,12 +14,7 @@ tag:
     - Cybersecurity
     - security
 post_format: []
-case_link_url:
-    - ''
-port_date:
-    - ''
-side_image:
-    - '1393'
+
 ---
 You hear Cybersecurity everywhere nowadays, everybody talk about it, lots of website and companies have problem with breaches and leaked information with Darknet bringing a way to dump all the databases and username password on the internet.
 

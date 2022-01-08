@@ -14,12 +14,7 @@ tag:
     - security
     - Wordpress
 post_format: []
-case_link_url:
-    - ''
-port_date:
-    - ''
-side_image:
-    - ''
+
 ---
 WPScan is a black box WordPress vulnerability scanner that can be used to scan remote WordPress installations to find security issues.You can use it to find vulnerability and brute forcing.
 

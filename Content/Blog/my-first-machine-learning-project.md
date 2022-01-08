@@ -15,8 +15,7 @@ tag:
     - ML
     - Python
 post_format: []
-side_image:
-    - '920'
+
 ---
 To understand what the script does line by line
 -----------------------------------------------

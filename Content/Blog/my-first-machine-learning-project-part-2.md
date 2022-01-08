@@ -14,12 +14,7 @@ tag:
     - Pyhton
     - TensorFlow
 post_format: []
-side_image:
-    - ''
-case_link_url:
-    - ''
-port_date:
-    - ''
+
 ---
 I trained my AI with a little bit more data!
 --------------------------------------------

@@ -13,12 +13,7 @@ category:
 tag:
     - Streaming
 post_format: []
-case_link_url:
-    - ''
-port_date:
-    - ''
-side_image:
-    - ''
+
 ---
 Twitch is a prominent online streaming video.
 

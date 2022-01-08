@@ -13,12 +13,7 @@ category:
     - Mobile
 tag: []
 post_format: []
-case_link_url:
-    - ''
-port_date:
-    - ''
-side_image:
-    - ''
+
 ---
 I have been working with React in past years and know my way around it, I have heard about react-native but never had any client or idea to build something with it until I saw a Reddit post about pigpen cipher. As soon as I saw the post I got an idea to turn it to an app so I can send a semi-encrypted massage to anyone.
 

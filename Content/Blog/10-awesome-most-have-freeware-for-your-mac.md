@@ -13,8 +13,6 @@ category:
 tag:
     - Osx
 post_format: []
-side_image:
-    - ''
 ---
 [Vanilla](https://matthewpalmer.net/vanilla/)  
 Vanilla hides certain status bar icons that you don’t wish to display all the time. It’s very useful for keeping your status area clean, as well as allows you to move around any of the status icons around the upper dock.
