@@ -7,12 +7,10 @@ import LocalImage from "../components/LocalImage";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data, pageContext }) => {
-  console.log(pageContext)
   const portfolioBlockData = data.markdownRemark.frontmatter;
   const portfolioBlockBody = data.markdownRemark.html;
   const [headerClose, setHeaderClose] = useState("");
 
-  console.log(pageContext)
   const { next, previous } = pageContext;
   const nextArticle = next && (
     <Link

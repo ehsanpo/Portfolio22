@@ -20,7 +20,9 @@ const Post = ({ data, pageContext }) => {
       <section>
         <div className="wrapper">
           <div className="wrapper-m">
-            <div dangerouslySetInnerHTML={{ __html: html}} ></div>
+           <div className="blogContent">
+           <div dangerouslySetInnerHTML={{ __html: html}} ></div>
+           </div>
           </div>
         </div>
       </section>

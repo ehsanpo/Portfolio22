@@ -1,43 +1,45 @@
-.box{
-	font-family:"Tomorrow";
+.box {
+	font-family: "Tomorrow";
 	position: relative;
 	min-width: 20%;
 	max-width: 50%;
 	font-weight: normal;
-	&.box--max{
+	&.box--max {
 		max-width: 100%;
 	}
-	.header{
+	.header {
 		font-size: 16px;
 		background: var(--boxColor);
 		display: inline-block;
-		color:var(--p2);
+		color: var(--p2);
 		padding: 2px 16px 1px 6px;
 		clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0% 100%);
-		transition: all 300ms ease-in-out ;
+		transition: all 300ms ease-in-out;
 		vertical-align: bottom;
 		margin-bottom: -1px;
 		span {
 			padding: 0px 2px;
 		}
 	}
-	&:hover{
-		h3{
+	&:hover {
+		h3 {
 			//letter-spacing: 1px;
 			text-shadow: 0 0 1px;
-			color:var(--boxHover);
+			color: var(--boxHover);
 		}
-		.header, hr{
+		.header,
+		hr {
 			background: var(--boxHover);
 		}
-		.header span{
+		.header span {
 			background: var(--p2);
 		}
-		.tags span,span{
-			color:var(--boxHover);
+		.tags span,
+		span {
+			color: var(--boxHover);
 		}
 	}
-	hr{
+	hr {
 		display: inline-block;
 		width: 64px;
 		height: 4px;
@@ -47,7 +49,7 @@
 		background-color: var(--boxColor);
 		clip-path: polygon(0 0, calc(100% - 2px) 0%, 100% 100%, 0% 100%);
 		left: -8px;
-		transition: all 300ms ease-in-out ;
+		transition: all 300ms ease-in-out;
 		vertical-align: bottom;
 		margin: 0 -2px;
 	}
@@ -55,44 +57,55 @@
 		text-align: center;
 		margin-top: 8px;
 	}
-	.portfolio-image-thumb{
+	.portfolio-image-thumb {
 		margin-bottom: 16px;
 		max-height: 170px;
 		padding: 0;
 	}
-	h3{
+	h3 {
 		margin-top: 0;
 		margin-bottom: 16px;
 		font-size: 24px;
 		transition: all 300ms ease-in-out;
 		color: #fff;
 	}
-	.box-wrapper{
-		clip-path: polygon(0 0,100% 0,100% calc(100% - 16px),calc(100% - 16px) 100%,0 100%);
+	.box-wrapper {
+		clip-path: polygon(
+			0 0,
+			100% 0,
+			100% calc(100% - 16px),
+			calc(100% - 16px) 100%,
+			0 100%
+		);
 		background: var(--boxColor);
 		padding: 16px;
-		transition: all 800ms ease-in-out ;
+		transition: all 800ms ease-in-out;
 		border-radius: 0 4px 0px 4px;
-		
 	}
-	.max-height{
+	.max-height {
 		height: calc(100% - 27px);
 		box-sizing: border-box;
 	}
-	.align{
+	.align {
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
 	}
-	.tags{
+	.tags {
 		font-size: 14px;
 		font-family: Tomorrow, sans-serif;
-		span{
+		span {
 			padding: 2px 8px 2px 4px;
 			background: var(--p2);
 			margin: 5px 4px;
-			clip-path: polygon(0 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%);
-			color:#fff;
+			clip-path: polygon(
+				0 0,
+				100% 0,
+				100% calc(100% - 8px),
+				calc(100% - 8px) 100%,
+				0 100%
+			);
+			color: #fff;
 			display: inline-block;
 		}
 	}
