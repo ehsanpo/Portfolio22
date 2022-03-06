@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //import { Link } from "gatsby"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -11,14 +11,14 @@ import { defaults } from "react-chartjs-2";
 import chart_data from "../data/skills-data";
 import Button from "../components/Button";
 import Stack from "../components/Stack";
-
-//console.log("chart_data", chart_data);
-
-const bgcolor = "rgba(254, 48, 72, 0.8)";
+import { StaticImage } from "gatsby-plugin-image";
+import ImageAndText from "../components/ImageAndText";
+const bgcolor = "rgba(254, 48, 72, 0.9)";
 const borderColor = "rgb(255, 255, 255)";
 
 const options = {
 	responsive: true,
+	fontSize: 40,
 	// backgroundColor:"#fff",
 	pointBorderColor: "#fff",
 	scale: {
@@ -41,6 +41,13 @@ const options = {
 			grid: {
 				color: "#040c1b",
 			},
+			pointLabels: {
+				color: "#fff",
+				font: {
+					size: 16,
+					family: "Tomorrow, sans-serif",
+				},
+			},
 		},
 	},
 	pointLabelFontColor: "rgba(255,255,255,1)",
@@ -48,6 +55,19 @@ const options = {
 	legend: {
 		labels: {
 			color: "#fff",
+		},
+	},
+
+	plugins: {
+		legend: {
+			labels: {
+				// This more specific font property overrides the global property
+				color: "#fef900",
+				font: {
+					size: 18,
+					family: "Tomorrow, sans-serif",
+				},
+			},
 		},
 	},
 };
@@ -83,6 +103,7 @@ const chart_data_maker = () => {
 
 const Skills = () => {
 	const return_array = chart_data_maker();
+	console.log(return_array);
 	const [skdata, setSkdata] = useState(return_array["Overall"]);
 
 	const handleClick = (chart_op, e) => {
@@ -95,6 +116,9 @@ const Skills = () => {
 
 		setSkdata(return_array[chart_op]);
 	};
+	useEffect(() => {
+		setSkdata(return_array["Overall"]);
+	}, []);
 
 	return (
 		<Layout>
@@ -132,36 +156,60 @@ const Skills = () => {
 					<Stack type="wordpress" />
 				</div>
 			</section>
+			<ImageAndText
+				left
+				nopad
+				image={
+					<StaticImage
+						src="../images/cloudpractitioner.jpg"
+						alt="AWS Cloud Certification"
+					/>
+				}
+			>
+				<h2>AWS Cloud Certification</h2>
+				<p>Officially certified as an AWS Solution Architect 2017</p>
+			</ImageAndText>
+			<ImageAndText
+				image={
+					<StaticImage
+						src="../images/cloudpractitioner2.jpg"
+						alt="Self-Educated"
+					/>
+				}
+			>
+				<h2>Online Self-Educated</h2>
+				<p>
+					I usually watch a lot of youtube tutorials, I alltså use
+					other sites like, Udemy, Lynda & Treehouse.
+				</p>
+			</ImageAndText>
+			<ImageAndText
+				left
+				image={<StaticImage src="../images/agile.jpeg" alt="agile" />}
+			>
+				<h2>Agile Development Processes</h2>
+				<p>
+					I believe that agility is about moving quickly and adapting
+					to change at a sustainable pace..
+				</p>
+			</ImageAndText>
+			<ImageAndText
+				image={
+					<StaticImage
+						src="../images/continuous-delivery.jpg"
+						alt="continuous-delivery"
+					/>
+				}
+			>
+				<h2>Continuous Development</h2>
+				<p>
+					Ability to get changes of all types—including new features,
+					configuration changes, bug fixes and experiments—into
+					production, or into the hands of users, safely and quickly
+					in a sustainable way.
+				</p>
+			</ImageAndText>
 		</Layout>
 	);
 };
 export default Skills;
-
-export const query = graphql`
-	query skills {
-		allMarkdownRemark(
-			filter: { frontmatter: { type: { eq: "portfolio" } } }
-			sort: { order: DESC, fields: frontmatter___port_date }
-		) {
-			edges {
-				node {
-					id
-					__typename
-					frontmatter {
-						title
-						category
-						tag
-						permalink
-						id
-						logo {
-							childImageSharp {
-								gatsbyImageData
-							}
-						}
-						type
-					}
-				}
-			}
-		}
-	}
-`;

@@ -1,56 +1,69 @@
-.footer{
+.footer {
 	margin-top: -48px;
-	clip-path :polygon(0px 20px, calc(5% - 20px) 20px, 5% 0px, 25% 0px, calc(25% + 15px) 15px, calc(75% - 15px) 15px, 75% 0px, 95% 0px, calc(95% + 20px) 20px, 100% 20px, 100% 100%, 60% 100%, calc(60% - 20px) calc(100% - 20px), calc(40% + 20px) calc(100% - 20px), 40% 100%, 0px 100%);
+	clip-path: polygon(
+		0px 20px,
+		calc(5% - 20px) 20px,
+		5% 0px,
+		25% 0px,
+		calc(25% + 15px) 15px,
+		calc(75% - 15px) 15px,
+		75% 0px,
+		95% 0px,
+		calc(95% + 20px) 20px,
+		100% 20px,
+		100% 100%,
+		60% 100%,
+		calc(60% - 20px) calc(100% - 20px),
+		calc(40% + 20px) calc(100% - 20px),
+		40% 100%,
+		0px 100%
+	);
 	margin-bottom: 33px;
 	z-index: 999;
 	position: relative;
-	@include bp-medium{
+	@include bp-medium {
 		margin-bottom: 10px;
 	}
-	.social{
+	.social {
 		text-align: left;
 		margin-top: 5px;
-		a{
+		a {
 			vertical-align: middle;
 			display: inline-block;
 			margin-left: 15px;
 		}
 	}
-	nav{
-		a{
+	nav {
+		a {
 			margin-bottom: 8px;
 			display: block;
 		}
 	}
 	.col-logo {
-		  text-align: right;
+		text-align: right;
 	}
-	
 }
-.copyr{
-		
-		background: var(--p1);
-		color:#fff;
-		text-align: center;
-		font-size: 12px;
-		padding: 8px;
-		margin-top: -32px;
-		
-	}
-.grid--footer{
-	
-	@include bp-medium{
+.copyr {
+	background: var(--p1);
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	padding: 8px;
+	margin-top: -32px;
+}
+.grid--footer {
+	@include bp-medium {
 		display: flex;
 	}
-	.col{
+	.col {
 		width: 100%;
 		padding: 64px;
 		background: var(--g4);
 		box-sizing: border-box;
-		&:nth-child(2){
+		&:nth-child(2) {
 			background: var(--g5);
 		}
-		@include bp-medium{
+		@include bp-medium {
 			width: 50%;
 		}
 	}

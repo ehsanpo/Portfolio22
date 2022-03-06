@@ -1,15 +1,14 @@
-.grid{
-
-	&.grid--no-gap{
+.grid {
+	&.grid--no-gap {
 		grid-gap: 24px;
-		@include bp-max{
+		@include bp-max {
 			grid-gap: 0;
 		}
 	}
 }
-.grid--2{
-	display:block;
-	@include bp-medium{
+.grid--2 {
+	display: block;
+	@include bp-medium {
 		display: flex;
 		flex-wrap: wrap;
 	}
@@ -17,36 +16,36 @@
 		flex: 1;
 		width: 100%;
 		box-sizing: border-box;
-		@include bp-medium{
+		@include bp-medium {
 			width: 50%;
-			margin-bottom:0;
+			margin-bottom: 0;
 			min-width: 50%;
 		}
 	}
 }
 
-.grid--auto-c{
-		display:block;
-		@include bp-medium{
-			display: flex;
-			flex-wrap: wrap;
-			margin: 0 -24px;
-		}
-		& > * {
-			flex: 1;
-			margin-top: 24px;
+.grid--auto-c {
+	display: block;
+	@include bp-medium {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -24px;
+	}
+	& > * {
+		flex: 1;
+		margin-top: 24px;
 
-			@include bp-medium{
-				margin-top: 0;
-				padding: 0 24px;
-				box-sizing: border-box;
-			}
-		}
-		&.grid-gap{
-			overflow: hidden;
-			 margin:0 -16px;
-			& > * {
-				padding:0 16px;
-			}
+		@include bp-medium {
+			margin-top: 0;
+			padding: 0 24px;
+			box-sizing: border-box;
 		}
 	}
+	&.grid-gap {
+		overflow: hidden;
+		margin: 0 -16px;
+		& > * {
+			padding: 0 16px;
+		}
+	}
+}

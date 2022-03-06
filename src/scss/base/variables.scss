@@ -3,51 +3,50 @@
 
 //Primary colours
 
-$c1: #2E3443;
+$c1: #2e3443;
 $c2: #fe3048;
-$c3: #7D112F;
+$c3: #7d112f;
 $c4: #8c8f98;
 $c5: #b0f000;
 $c6: #2b303b;
 
-
-html{
-	--p1:#2d3342;
-	--p2:#565c6d;
-	--p3:#040c1b;
-	--c1:#ff0066;
-	--c2:#800033;
-	--c3:#40001a;
-	--c4:#e6005c;
-	--c5:#c5003c;
+html {
+	--p1: #2d3342;
+	--p2: #565c6d;
+	--p3: #040c1b;
+	--c1: #ff0066;
+	--c2: #800033;
+	--c3: #40001a;
+	--c4: #e6005c;
+	--c5: #c5003c;
 	--green: #41bf50;
-	--green2:#8bcc3b;
-	--yellow:#fef900;
-	--orange:#f59740;
-	--lighblue:#69f8ff;
-	--blue:#0040b0;
-	--darkblue:#1f0f57;
-	--gx: linear-gradient(220deg,var(--p3),var(--c5));
-	--g1: linear-gradient(220deg,var(--darkblue),var(--c5));
-	--g2: linear-gradient(220deg,var(--orange),var(--c5));
+	--green2: #8bcc3b;
+	--yellow: #fef900;
+	--orange: #f59740;
+	--lighblue: #69f8ff;
+	--blue: #0040b0;
+	--darkblue: #1f0f57;
+	--gx: linear-gradient(220deg, var(--p3), var(--c5));
+	--g1: linear-gradient(220deg, var(--darkblue), var(--c5));
+	--g2: linear-gradient(220deg, var(--orange), var(--c5));
 	--g3: linear-gradient(220deg, var(--c1), var(--yellow));
 	--g4: linear-gradient(220deg, var(--p1), var(--p3));
-	--g5: linear-gradient(90deg, var(--c5) , var(--orange));
+	--g5: linear-gradient(90deg, var(--c5), var(--orange));
 	--block-h: 30vh;
 }
 
 //UX colours
 
-$dark:	#505050;
-$mid:	#c4c4c4;
-$light:	#f0f0f0;
-$pos:	#28a745;
-$neg	:#dc3545;
-
+$dark: #505050;
+$mid: #c4c4c4;
+$light: #f0f0f0;
+$pos: #28a745;
+$neg: #dc3545;
 
 //Grid
 $max-width: 1400px;
 $max-width_m: 720px;
+$max-width_l: 920px;
 $max-width_n: 328px;
 
 $break-small: 30em;
@@ -55,23 +54,22 @@ $break-mid: 40em;
 $break-large: 60em;
 
 //Padding Desktop
-$pad: 		96px;
-$pad_xl:	96px;
-$pad_l: 	64px;
-$pad_m:		48px;
-$pad_s: 	32px;
-$pad_xs: 	24px;
+$pad: 96px;
+$pad_xl: 96px;
+$pad_l: 64px;
+$pad_m: 48px;
+$pad_s: 32px;
+$pad_xs: 24px;
 
 //Padding Mobile
-$pad_m:		64px;
-$pad_m_xl:	64px;
-$pad_m_l:	48px;
-$pad_m_m:	32px;
-$pad_m_s:	24px;
-$pad_m_xs:	16px;
+$pad_m: 64px;
+$pad_m_xl: 64px;
+$pad_m_l: 48px;
+$pad_m_m: 32px;
+$pad_m_s: 24px;
+$pad_m_xs: 16px;
 
+$block_pad: 80px;
+$block_pad_m: 64px;
 
-$block_pad:80px;
-$block_pad_m:64px;
-
-$transition: .35s all cubic-bezier(.455,.03,.515,.955);
+$transition: 0.35s all cubic-bezier(0.455, 0.03, 0.515, 0.955);

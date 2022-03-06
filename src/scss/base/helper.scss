@@ -12,16 +12,20 @@
 	@extend %max_w_m;
 	flex: none;
 }
+.wrapper-l {
+	@extend %max_w_l;
+	flex: none;
+}
 .v-center {
 	@extend %v_c;
 }
 .v-center--f {
-    align-self: center;
+	align-self: center;
 }
-.yellow{
+.yellow {
 	color: var(--yellow);
 }
-.blue{
+.blue {
 	color: var(--blue-color);
 }
 .red {

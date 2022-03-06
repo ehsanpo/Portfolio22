@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import Loadable from "@loadable/component";
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import InViewMonitor from "react-inview-monitor";
@@ -7,6 +9,7 @@ import Award from "../components/Award";
 import Button from "../components/Button";
 
 const NotFoundPage = () => {
+	const Imagehover = Loadable(() => import("../components/Imagehover"));
 	return (
 		<Layout>
 			<SEO title="Music Producent" />
@@ -16,8 +19,8 @@ const NotFoundPage = () => {
 				</div>
 			</div>
 			<section>
-				<div className="wrapper">
-					<div className="wrapper-m">
+				<div className="wrapper wrapper-l">
+					<div style={{ flex: 4 }}>
 						<h2>Hej Hej, I’m Ehsan Pourhadi.</h2>
 						<p>
 							I am a self-learned web developer, web designer &
@@ -54,6 +57,9 @@ const NotFoundPage = () => {
 							and give you the best of the best possible
 							experience.
 						</p>
+					</div>
+					<div>
+						<Imagehover />
 					</div>
 				</div>
 			</section>
@@ -196,7 +202,18 @@ const NotFoundPage = () => {
 							<li data-aos="fade-right" className="aos-init">
 								<div className="timelineUnit">
 									<h4>
-										Linux Academy / A Cloud Guru{" "}
+										Ruby on Rails
+										<span className="timelineDate">
+											2021
+										</span>
+									</h4>
+									<p>BredBand2</p>
+								</div>
+							</li>
+							<li data-aos="fade-right" className="aos-init">
+								<div className="timelineUnit">
+									<h4>
+										Linux Academy / A Cloud Guru
 										<span className="timelineDate">
 											2018
 										</span>

@@ -32,9 +32,8 @@ const Stack = ({ type = "nodejs" }) => {
 
 	return (
 		<div className="stackholder">
-			<img alt="Node.js" src={toRender.icon} />
+			<img alt={toRender.headline} src={toRender.icon} />
 			<h3>{toRender.headline}</h3>
-
 			<div className="stacks">
 				<ul>
 					{toRender.tools.map((t) => (
