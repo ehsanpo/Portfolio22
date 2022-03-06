@@ -1,18 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SeO from "../components/seo";
 import SpotifyPlayer from "react-spotify-player";
 import InViewMonitor from "react-inview-monitor";
 
 const NotFoundPage = () => {
-	const [headerClose, setHeaderClose] = useState("");
 
-	useEffect(() => {
-		let open = setTimeout(function () {
-			setHeaderClose("portfolio-header--close");
-			clearTimeout(open);
-		}, 1000);
-	}, []);
 	const size = {
 		width: "100%",
 		height: 300,
@@ -24,10 +17,9 @@ const NotFoundPage = () => {
 
 	return (
 		<Layout>
-			<SEO title="Music Producent" />
+			<SeO title="Music Producent" />
 			<div className="page-header">
 				<h2 class="display">Music</h2>
-
 				<br />
 				<iframe
 					src="https://open.spotify.com/follow/1/?uri=spotify:artist:079CRvThNlTupHjEQ6LCnw&size=detail&theme=dark"
@@ -36,6 +28,7 @@ const NotFoundPage = () => {
 					scrolling="no"
 					frameborder="0"
 					allowtransparency="true"
+					title="Follow me on spotify"
 				></iframe>
 			</div>
 			<section>

@@ -1,12 +1,13 @@
 import React from "react";
 import "./hero.scss";
 import Button from "../Button";
-
+import logo from "./logo.svg";
 const Hero = () => {
 	return (
 		<section className="hero">
 			<div className="wrapper">
 				<div className="v-center--f">
+					<img alt="EP Logo" className="logo" src={logo} />
 					<h1 className="display">Ehsan Pourhadi</h1>
 					<h2>Software Developer / Music Producer</h2>
 					<div className="intro">

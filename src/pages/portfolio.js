@@ -1,8 +1,7 @@
 import React from "react";
 //import { Link } from "gatsby"
 import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Parallax from "../components/ParallaxImage";
+import SeO from "../components/seo";
 import { graphql } from "gatsby";
 import PortfolioBlock from "../components/PortfolioBlock";
 
@@ -10,7 +9,7 @@ const Portfolio = ({ data }) => {
 	// console.log(data)
 	return (
 		<Layout>
-			<SEO title="Developer Portfolio" />
+			<SeO title="Developer Portfolio" />
 			<div className="page-header">
 				<div className="wrapper">
 					<h1 className="display">Portfolio</h1>

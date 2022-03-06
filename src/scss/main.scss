@@ -40,10 +40,7 @@ h1 {
 }
 
 section {
-	padding: 64px 0;
-	@include bp-medium {
-		padding: 128px 0;
-	}
+	padding: 128px 0;
 	background: var(--p3);
 	clip-path: polygon(
 		0px 0px,

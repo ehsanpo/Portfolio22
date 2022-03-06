@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from "react";
 //import { Link } from "gatsby"
 import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Parallax from "../components/ParallaxImage";
-import { graphql } from "gatsby";
-import PortfolioBlock from "../components/PortfolioBlock";
+import SeO from "../components/seo";
 import { Radar } from "react-chartjs-2";
-import { defaults } from "react-chartjs-2";
-// defaults.global.defaultFontColor = "rgba(255,255, 255, 1)";
 import chart_data from "../data/skills-data";
 import Button from "../components/Button";
 import Stack from "../components/Stack";
 import { StaticImage } from "gatsby-plugin-image";
 import ImageAndText from "../components/ImageAndText";
 const bgcolor = "rgba(254, 48, 72, 0.9)";
-const borderColor = "rgb(255, 255, 255)";
 
 const options = {
 	responsive: true,
@@ -118,11 +112,11 @@ const Skills = () => {
 	};
 	useEffect(() => {
 		setSkdata(return_array["Overall"]);
-	}, []);
+	}, [return_array]);
 
 	return (
 		<Layout>
-			<SEO title="Developer Portfolio" />
+			<SeO title="Developer Portfolio" />
 			<div className="page-header">
 				<div className="wrapper">
 					<h1 className="display">Skills</h1>

@@ -1,14 +1,14 @@
 import React from "react";
 //import { Link } from "gatsby"
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SeO from "../components/seo";
 import Parallax from "../components/ParallaxImage";
 import { graphql } from "gatsby";
 import PostBlock from "../components/PostBlock";
 
 const Portfolio = ({ data }) => (
 	<Layout>
-		<SEO title="Developer Portfolio" />
+		<SeO title="Developer Portfolio" />
 		<Parallax filename="x2.jpg" />
 		<div className="page-header">
 			<div className="wrapper">

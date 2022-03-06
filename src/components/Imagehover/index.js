@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-import { graphql, StaticQuery } from "gatsby";
 import hoverEffect from "hover-effect";
 import portfolioImage from "../../images/ep-1.jpg";
 import portfolioImage2 from "../../images/ep-2.jpg";
@@ -8,24 +7,37 @@ import flip2 from "../../images/112.jpg";
 import flip3 from "../../images/113.jpg";
 import flip4 from "../../images/114.jpg";
 import flip5 from "../../images/115.jpg";
+import flip6 from "../../images/116.jpg";
+import flip7 from "../../images/117.jpg";
+import flip8 from "../../images/118.jpg";
+import flip9 from "../../images/119.jpg";
+import flip10 from "../../images/120.jpg";
 
 const LocalImage = () => {
 	const container = useRef();
-
-	const ImageEffectArray = [flip1, flip2, flip3, flip4, flip5];
-	const randomElement = ImageEffectArray[Math.floor(Math.random() * ImageEffectArray.length)];
-	console.log('2',randomElement,  ImageEffectArray )
-
+	const ImageEffectArray = [
+		flip1,
+		flip2,
+		flip3,
+		flip4,
+		flip5,
+		flip6,
+		flip7,
+		flip8,
+		flip9,
+		flip10,
+	];
+	const randomElement =
+		ImageEffectArray[Math.floor(Math.random() * ImageEffectArray.length)];
 	useEffect(() => {
-		//console.log(container.current);
 		new hoverEffect({
 			parent: container.current,
 			intensity: 0.3,
 			image1: portfolioImage,
 			image2: portfolioImage2,
-			displacementImage:  randomElement,
+			displacementImage: randomElement,
 		});
-	}, [container]);
+	}, [container, randomElement]);
 
 	return (
 		<div

@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
 import "./box.scss";
-import LocalImage from "../LocalImage";
 
 function onlyCapitalLetters(str) {
 	return (str.match(/[A-Z]/g) || []).join("");
 }
 
 const Box = ({ node, image }) => {
-	const { id, title, tag, permalink, category, logo } = node;
+	const { id, title, tag, permalink, category } = node;
 	return (
 		<Link to={permalink} className="box">
 			<span className="box__glitch"></span>

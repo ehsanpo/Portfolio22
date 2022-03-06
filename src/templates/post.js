@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from "gatsby";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SeO from "../components/seo";
 
 const Post = ({ data, pageContext }) => {
 	// console.log(data);
-	const { next, prev } = pageContext;
-	const { html, frontmatter, excerpt } = data.markdownRemark;
-	const { title, tags, permalink, description } = frontmatter;
+	// const { next, prev } = pageContext;
+	const { html, frontmatter } = data.markdownRemark;
+	// const { title, tags, permalink, description } = frontmatter;
+	const { title } = frontmatter;
 	return (
 		<Layout>
-			<SEO title={title} />
+			<SeO title={title} />
 			<div className="page-header ">
 				<div className="wrapper">
 					<h1 className="display">{title}</h1>

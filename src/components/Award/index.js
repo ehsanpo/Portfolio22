@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-plugin-image";
 import "./style.scss";
 import InViewMonitor from "react-inview-monitor";
 import Button from "../Button";

@@ -40,7 +40,13 @@ header.header {
 		//overflow: hidden;
 		position: relative;
 	}
-
+	.open {
+		height: 100vh;
+		padding-top: 20vh;
+		li {
+			@extend %anim-delay;
+		}
+	}
 	nav {
 		padding: 32px 0;
 		vertical-align: middle;
@@ -108,13 +114,6 @@ header.header {
 				}
 			}
 		}
-		&.open {
-			height: 100vh;
-			padding-top: 20vh;
-			li {
-				@extend %anim-delay;
-			}
-		}
 		li {
 			display: block;
 			margin-bottom: 16px;
@@ -132,8 +131,8 @@ header.header {
 	border: none;
 	display: inline-block;
 	position: absolute;
-	right: 16px;
-	top: -2px;
+	right: 10px;
+	top: 18px;
 	z-index: 10;
 	@include bp-medium {
 		display: none;

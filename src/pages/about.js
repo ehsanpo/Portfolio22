@@ -1,9 +1,7 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import Loadable from "@loadable/component";
-
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SeO from "../components/seo";
 import InViewMonitor from "react-inview-monitor";
 import Award from "../components/Award";
 import Button from "../components/Button";
@@ -12,7 +10,7 @@ const NotFoundPage = () => {
 	const Imagehover = Loadable(() => import("../components/Imagehover"));
 	return (
 		<Layout>
-			<SEO title="Music Producent" />
+			<SeO title="Music Producent" />
 			<div className="page-header ">
 				<div className="wrapper">
 					<h1 className="display">About</h1>

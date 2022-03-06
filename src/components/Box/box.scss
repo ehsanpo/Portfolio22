@@ -1,9 +1,13 @@
 .box {
 	font-family: "Tomorrow";
 	position: relative;
-	min-width: 20%;
-	max-width: 50%;
+
 	font-weight: normal;
+	@media only screen and (min-width: 40em) {
+		min-width: 20%;
+		max-width: 50%;
+	}
+
 	&.box--max {
 		max-width: 100%;
 	}

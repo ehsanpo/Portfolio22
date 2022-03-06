@@ -1,7 +1,7 @@
 import React from "react";
 import InViewMonitor from "react-inview-monitor";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SeO from "../components/seo";
 import Button from "../components/Button";
 // import Box from "../components/Card";
 import Stack from "../components/Stack";
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
 	const portfolioBlockData = data.allMarkdownRemark.edges;
 	return (
 		<Layout>
-			<SEO title="Home" />
+			<SeO title="Home" />
 			<Hero />
 			<PortfolioBlock data={portfolioBlockData} onHome />
 			<section className="no-bg">

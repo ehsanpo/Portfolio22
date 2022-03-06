@@ -1,10 +1,9 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Seo from "../components/seo";
 import { graphql, Link } from "gatsby";
 import Button from "../components/Button";
-import LocalImage from "../components/LocalImage";
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const IndexPage = ({ data, pageContext }) => {
   const portfolioBlockData = data.markdownRemark.frontmatter;
@@ -40,7 +39,7 @@ const IndexPage = ({ data, pageContext }) => {
   // console.log(pageContext);
   return (
     <Layout>
-      <SEO title={portfolioBlockData.title} />
+      <Seo title={portfolioBlockData.title} />
       <div className="portfolio-page page">
         <div
           className={`portfolio-header ${headerClose} ${
