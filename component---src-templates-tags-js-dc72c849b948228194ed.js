@@ -1,2 +1,0 @@
-(self.webpackChunkmy_gatsby_site=self.webpackChunkmy_gatsby_site||[]).push([[942],{5929:function(e,t,n){"use strict";n.r(t);var a=n(7294),r=n(5444);t.default=function(e){var t=e.pageContext,n=t.posts,l=t.tagName;l.charAt(0).toUpperCase(),l.slice(1);return a.createElement("div",null,n.map((function(e,t){return a.createElement(r.Link,{key:t,to:e.frontmatter.permalink},a.createElement("h3",null,e.frontmatter.title))})))}}}]);
-//# sourceMappingURL=component---src-templates-tags-js-dc72c849b948228194ed.js.map

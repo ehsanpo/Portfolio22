@@ -1,2 +1,0 @@
-(self.webpackChunkmy_gatsby_site=self.webpackChunkmy_gatsby_site||[]).push([[848],{501:function(e,t,a){"use strict";a.r(t);var n=a(7294),r=a(5444);t.default=function(e){var t=e.pageContext.tags;return n.createElement("div",null,t&&t.map((function(e){var t=e.charAt(0).toUpperCase()+e.slice(1);return n.createElement(r.Link,{key:e,to:"/tags/"+e},n.createElement("span",null,t))})))}}}]);
-//# sourceMappingURL=component---src-templates-tags-page-js-dab1401212b54c3eaec6.js.map
