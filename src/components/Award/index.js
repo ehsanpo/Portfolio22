@@ -52,7 +52,7 @@ const Award = () => {
 							fixed={data?.image2?.childImageSharp.fixed}
 							alt=""
 						/>
-						<div class="content">
+						<div className="content">
 							<h3>Svenska design</h3>
 							Gold Category Digital Design
 						</div>
@@ -75,7 +75,7 @@ const Award = () => {
 							fixed={data.image1?.childImageSharp.fixed}
 							alt=""
 						/>
-						<div class="content">
+						<div className="content">
 							<h3>Cannes lions</h3>
 							Silver Lion in Promo & Activation, Bronze Lion in
 							Cyber & Shortlist in Media
@@ -99,7 +99,7 @@ const Award = () => {
 							fixed={data.image3?.childImageSharp.fixed}
 							alt=""
 						/>
-						<div class="content">
+						<div className="content">
 							<h3>Guldägget</h3>
 							Gold Category PR & Silver Categories Digital and
 							Alternative Media

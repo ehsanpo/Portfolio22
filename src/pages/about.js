@@ -353,7 +353,7 @@ const NotFoundPage = () => {
 				</div>
 			</section>
 
-			<section class="image-text-block-boxed no-bg add_padding">
+			<section className="image-text-block-boxed no-bg add_padding">
 				<InViewMonitor
 					intoViewMargin="6%"
 					classNameNotInView="vis-hidden"
@@ -362,8 +362,8 @@ const NotFoundPage = () => {
 				>
 					<h2 className="title red">My Resume</h2>
 				</InViewMonitor>
-				<div class="wrapper-m">
-					<div class=" center">
+				<div className="wrapper-m">
+					<div className=" center">
 						<Button
 							type="link"
 							to="https://ehsan-pourhadi.com/site/uploads/2019/04/CV-19-SV.pdf"
@@ -384,7 +384,7 @@ const NotFoundPage = () => {
 						</Button>
 					</div>
 
-					<div class="itb-image">
+					<div className="itb-image">
 						<img
 							src="https://ehsan-pourhadi.com/site/uploads/2020/06/wsi-imageoptim-Free-A4-Paper-in-Male-Hand-Mockup-PSD-scaled.jpg"
 							alt=""

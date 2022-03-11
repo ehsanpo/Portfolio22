@@ -12,14 +12,14 @@ const Header = ({ siteTitle }) => {
 			}}
 		>
 			<button
-				class=" button__navigation icon-only"
+				className=" button__navigation icon-only"
 				aria-label="Menu"
 				aria-controls="navigation"
 				onClick={(e) => {
 					setHeaderButton(current => !current);
 				}}
 			>
-				<div class="nav-icon">
+				<div className="nav-icon">
 					<span></span>
 					<span></span>
 					<span></span>

@@ -19,7 +19,7 @@ const NotFoundPage = () => {
 		<Layout>
 			<SeO title="Music Producent" />
 			<div className="page-header">
-				<h2 class="display">Music</h2>
+				<h2 className="display">Music</h2>
 				<br />
 				<iframe
 					src="https://open.spotify.com/follow/1/?uri=spotify:artist:079CRvThNlTupHjEQ6LCnw&size=detail&theme=dark"

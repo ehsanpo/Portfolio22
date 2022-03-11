@@ -94,9 +94,11 @@ const chart_data_maker = () => {
 	}
 	return return_array;
 };
+const return_array = chart_data_maker();
 
 const Skills = () => {
-	const return_array = chart_data_maker();
+	console.log(1,);
+	
 	const [skdata, setSkdata] = useState(return_array["Overall"]);
 
 	const handleClick = (chart_op, e) => {
