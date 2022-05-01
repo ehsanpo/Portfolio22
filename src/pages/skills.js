@@ -10,6 +10,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import ImageAndText from "../components/ImageAndText";
 
 const Skills = () => {
+
+	const bgcolor = "rgba(254, 48, 72, 0.8)";
+	
 	const chart_data_maker = () => {
 		let return_array = [];
 		let slug;
@@ -43,7 +46,7 @@ const Skills = () => {
 
 	const [skdata, setSkdata] = useState(return_array["Overall"]);
 
-	const bgcolor = "rgba(254, 48, 72, 0.8)";
+
 
 	const options = {
 		responsive: true,
@@ -101,9 +104,9 @@ const Skills = () => {
 			},
 		},
 	};
-
+	var list = document.getElementsByTagName("button");
 	const handleClick = (chart_op, e) => {
-		var list = document.getElementsByTagName("button");
+		console.log(list)
 		for (var i = 0; i < list.length; i++) {
 			list[i].classList.remove("active", "Overall");
 		}
