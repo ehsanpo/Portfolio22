@@ -8,112 +8,112 @@ import Button from "../components/Button";
 import Stack from "../components/Stack";
 import { StaticImage } from "gatsby-plugin-image";
 import ImageAndText from "../components/ImageAndText";
-const bgcolor = "rgba(254, 48, 72, 0.9)";
-
-const options = {
-	responsive: true,
-	fontSize: 40,
-	// backgroundColor:"#fff",
-	pointBorderColor: "#fff",
-	scale: {
-		ticks: {
-			showLabelBackdrop: true,
-			//backdropColor: "#fef900",
-			fontColor: "#ffffff",
-			//backgroundColor: "#fef900",
-			min: 0,
-			max: 10,
-			stepSize: 2,
-		},
-	},
-	scales: {
-		r: {
-			title: {
-				text: "red",
-			},
-			beginAtZero: true,
-			grid: {
-				color: "#040c1b",
-			},
-			pointLabels: {
-				color: "#fff",
-				font: {
-					size: 16,
-					family: "Tomorrow, sans-serif",
-				},
-			},
-		},
-	},
-	pointLabelFontColor: "rgba(255,255,255,1)",
-
-	legend: {
-		labels: {
-			color: "#fff",
-		},
-	},
-
-	plugins: {
-		legend: {
-			labels: {
-				// This more specific font property overrides the global property
-				color: "#fef900",
-				font: {
-					size: 18,
-					family: "Tomorrow, sans-serif",
-				},
-			},
-		},
-	},
-};
-
-const chart_data_maker = () => {
-	let return_array = [];
-	let slug;
-	let skill;
-
-	for (var i = 0; i < chart_data.length; i++) {
-		skill = chart_data[i];
-		slug = skill.slug;
-
-		return_array[slug] = {
-			labels: skill.labels,
-			datasets: [
-				{
-					label: skill.slug,
-					data: skill.data,
-					pointBackgroundColor: "#fef900",
-					pointHoverRadius: 5,
-					borderWidth: 1,
-					fill: true,
-					scaleStartValue: 0,
-					// backgroundColor: bgcolor,
-					borderColor: bgcolor,
-				},
-			],
-		};
-	}
-	return return_array;
-};
-const return_array = chart_data_maker();
 
 const Skills = () => {
-	console.log(1,);
-	
+	const chart_data_maker = () => {
+		let return_array = [];
+		let slug;
+		let skill;
+
+		for (var i = 0; i < chart_data.length; i++) {
+			skill = chart_data[i];
+			slug = skill.slug;
+			// debugger;
+			return_array[slug] = {
+				labels: skill.labels,
+				datasets: [
+					{
+						label: skill.slug,
+						data: skill.data,
+						pointBackgroundColor: "#fef900",
+						pointHoverRadius: 5,
+						borderWidth: 1,
+						fill: true,
+						scaleStartValue: 0,
+						// backgroundColor: bgcolor,
+						borderColor: bgcolor,
+					},
+				],
+			};
+		}
+		return return_array;
+	};
+
+	const return_array = chart_data_maker();
+
 	const [skdata, setSkdata] = useState(return_array["Overall"]);
 
+	const bgcolor = "rgba(254, 48, 72, 0.8)";
+
+	const options = {
+		responsive: true,
+		fontSize: 40,
+		backgroundColor: bgcolor,
+		// backgroundColor:"#fff",
+		pointBorderColor: "#fff",
+		scale: {
+			ticks: {
+				showLabelBackdrop: true,
+				//backdropColor: "#fef900",
+				fontColor: "#ffffff",
+				//backgroundColor: "#fef900",
+				min: 0,
+				max: 10,
+				stepSize: 2,
+			},
+		},
+		scales: {
+			r: {
+				// title: {
+				// 	text: "red",
+				// },
+				beginAtZero: true,
+				grid: {
+					color: "##41bf50",
+				},
+				pointLabels: {
+					color: "#fff",
+					font: {
+						size: 16,
+						family: "Tomorrow, sans-serif",
+					},
+				},
+			},
+		},
+		pointLabelFontColor: "rgba(255,255,255,1)",
+
+		legend: {
+			labels: {
+				color: "#fff",
+			},
+		},
+
+		plugins: {
+			legend: {
+				labels: {
+					// This more specific font property overrides the global property
+					color: "#fef900",
+					font: {
+						size: 18,
+						family: "Tomorrow, sans-serif",
+					},
+				},
+			},
+		},
+	};
+
 	const handleClick = (chart_op, e) => {
-		const return_array = chart_data_maker();
 		var list = document.getElementsByTagName("button");
 		for (var i = 0; i < list.length; i++) {
 			list[i].classList.remove("active", "Overall");
 		}
 		e.target.classList.add("active");
-
 		setSkdata(return_array[chart_op]);
 	};
-	useEffect(() => {
-		setSkdata(return_array["Overall"]);
-	}, []);
+
+	// useEffect(() => {
+	// 	setSkdata(return_array["Overall"]);
+	// }, []);
 
 	return (
 		<Layout>

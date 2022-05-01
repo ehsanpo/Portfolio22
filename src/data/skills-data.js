@@ -9,7 +9,7 @@ const chart_data = [
 			"Wordpress",
 			"Ruby on Rails",
 		],
-		data: [10, 10, 9, 7, 10, 9],
+		data: ["10", "10", "9", "7", "10", "9"],
 	},
 	{
 		slug: "Design",
