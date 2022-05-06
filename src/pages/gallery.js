@@ -16,7 +16,7 @@ const Portfolio = () => (
 		</div>
 
 		<section className="no-pad no-marg ">
-			<iframe className="iframeGallery" src="E/build.html" />
+			<iframe className="iframeGallery" src="https://ehsanpo.github.io/virtual-art-gallery/" />
 		</section>
 	</Layout>
 );

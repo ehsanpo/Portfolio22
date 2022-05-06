@@ -8,7 +8,7 @@ import Button from "../components/Button";
 import Stack from "../components/Stack";
 import { StaticImage } from "gatsby-plugin-image";
 import ImageAndText from "../components/ImageAndText";
-
+let list
 const Skills = () => {
 
 	const bgcolor = "rgba(254, 48, 72, 0.8)";
@@ -104,7 +104,7 @@ const Skills = () => {
 			},
 		},
 	};
-	var list = document.getElementsByTagName("button");
+	list = typeof document !== `undefined` ? document.getElementsByTagName("button"): [];
 	const handleClick = (chart_op, e) => {
 		console.log(list)
 		for (var i = 0; i < list.length; i++) {
