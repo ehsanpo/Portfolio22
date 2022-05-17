@@ -28,6 +28,7 @@ bilder:
     - '4.jpg'
     - '3.jpg'
     - '111.png'
+    - '1-2.png'
 case_link_url:
     - ''
 body_text:

@@ -27,7 +27,7 @@ const Index = ({ data, onHome = false }) => {
 			</div>
 			{onHome && (
 				<div className="center">
-					<Button className="btn--3">See Portfolio</Button>
+					<Button type="link" to="/portfolio" className="btn--3">See Portfolio</Button>
 				</div>
 			)}
 		</section>

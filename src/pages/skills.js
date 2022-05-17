@@ -120,7 +120,7 @@ const Skills = () => {
 
 	return (
 		<Layout>
-			<SeO title="Developer Portfolio" />
+			<SeO title="Skills" />
 			<div className="page-header">
 				<div className="wrapper">
 					<h1 className="display">Skills</h1>

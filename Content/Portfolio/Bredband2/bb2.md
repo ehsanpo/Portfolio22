@@ -28,8 +28,9 @@ logo:
     - 'logo.png'
 video:
 bilder:
+    - 'bredband2-v2.png'
     - '1.jpg'
 port_date:
-    - '2021'
+    - '2021 - 2022'
 
 ---

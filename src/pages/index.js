@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
 	const portfolioBlockData = data.allMarkdownRemark.edges;
 	return (
 		<Layout>
-			<SeO title="Home" />
+			<SeO title="Digital Developer" />
 			<Hero />
 			<PortfolioBlock data={portfolioBlockData} onHome />
 			<section className="no-bg">
@@ -42,7 +42,9 @@ const IndexPage = ({ data }) => {
 						classNameInView="animated titleIn"
 						toggleClassNameOnInView
 					>
-						<Button sec>see Skills</Button>
+						<Button to="/skills" type="link" sec>
+							See Skills
+						</Button>
 					</InViewMonitor>
 				</div>
 			</section>

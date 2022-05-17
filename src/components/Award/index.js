@@ -3,29 +3,37 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import "./style.scss";
 import InViewMonitor from "react-inview-monitor";
 import Button from "../Button";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Award = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			image1: file(relativePath: { eq: "cannen.png" }) {
 				childImageSharp {
-					fixed(width: 83, height: 85, quality: 100) {
-						...GatsbyImageSharpFixed_tracedSVG
-					}
+					gatsbyImageData(
+						layout: FIXED
+						width: 83
+						height: 85
+						placeholder: BLURRED
+					)
 				}
 			}
 			image2: file(relativePath: { eq: "svenskadesign.png" }) {
 				childImageSharp {
-					fixed(width: 83, height: 85, quality: 100) {
-						...GatsbyImageSharpFixed_tracedSVG
-					}
+					gatsbyImageData(
+						layout: FIXED
+						width: 83
+						placeholder: BLURRED
+					)
 				}
 			}
 			image3: file(relativePath: { eq: "guldagg.png" }) {
 				childImageSharp {
-					fixed(width: 83, height: 85, quality: 100) {
-						...GatsbyImageSharpFixed_tracedSVG
-					}
+					gatsbyImageData(
+						layout: FIXED
+						width: 83
+						placeholder: BLURRED
+					)
 				}
 			}
 		}
@@ -48,9 +56,12 @@ const Award = () => {
 						classNameInView="animated titleIn"
 						toggleClassNameOnInView
 					>
-						<img
-							fixed={data?.image2?.childImageSharp.fixed}
-							alt=""
+						<GatsbyImage
+							alt="Svenska design"
+							className="award-img"
+							image={
+								data?.image2?.childImageSharp.gatsbyImageData
+							}
 						/>
 						<div className="content">
 							<h3>Svenska design</h3>
@@ -71,9 +82,12 @@ const Award = () => {
 						classNameInView="animated titleIn"
 						toggleClassNameOnInView
 					>
-						<img
-							fixed={data.image1?.childImageSharp.fixed}
-							alt=""
+						<GatsbyImage
+							alt="Cannes lions"
+							className="award-img"
+							image={
+								data?.image1?.childImageSharp.gatsbyImageData
+							}
 						/>
 						<div className="content">
 							<h3>Cannes lions</h3>
@@ -95,9 +109,12 @@ const Award = () => {
 						classNameInView="animated titleIn"
 						toggleClassNameOnInView
 					>
-						<img
-							fixed={data.image3?.childImageSharp.fixed}
-							alt=""
+						<GatsbyImage
+							alt="Guldägget"
+							className="award-img"
+							image={
+								data?.image3?.childImageSharp.gatsbyImageData
+							}
 						/>
 						<div className="content">
 							<h3>Guldägget</h3>
@@ -114,7 +131,9 @@ const Award = () => {
 				</div>
 			</div>
 			<div className="center">
-				<Button className="btn--secondary">About Ehsan</Button>
+				<Button type="link" to="/about" className="btn--secondary">
+					About Ehsan
+				</Button>
 			</div>
 		</section>
 	);
