@@ -27,6 +27,7 @@ tagline:
 background_image:
     - 'bg.png'
 logo:
+    - 'logo.png'
 bilder:
     - '1.png'
     - '2.png'

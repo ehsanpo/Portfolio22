@@ -25,6 +25,7 @@ tagline:
 background_image:
     - 'mekg.jpg'
 logo:
+    - 'mlogo.png'
 video:
     - ''
 bilder:

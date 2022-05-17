@@ -57,7 +57,12 @@ export const query = graphql`
 						id
 						logo {
 							childImageSharp {
-								gatsbyImageData
+								gatsbyImageData(
+									layout: CONSTRAINED
+									
+									placeholder: BLURRED
+									formats: [AUTO, WEBP, AVIF]
+								)
 							}
 						}
 						type

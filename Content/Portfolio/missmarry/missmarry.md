@@ -24,6 +24,7 @@ tagline:
 background_image:
     - 'mockup-1.jpg'
 logo:
+    - 'mlogo.png'
 video:
 bilder:
     - '11.png'
