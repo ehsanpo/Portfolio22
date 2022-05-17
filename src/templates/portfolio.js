@@ -109,89 +109,88 @@ const IndexPage = ({ data, pageContext }) => {
             </div>
           </div> */}
 
-					<div className="portfolioBlockBody wrapper">
-						<div className="box">
-							<span className="box__glitch"></span>
-							<div className="header">
-								<span>01</span> Info
-							</div>
-							<hr />
-							<div className="box-wrapper">
-								<h4>
-									<span>Date</span>
-
-									{portfolioBlockData.port_date}
-								</h4>
-								<h4>
-									<span>Client</span>
-
-									{portfolioBlockData.client}
-								</h4>
-								{portfolioBlockData.agancy && (
-									<h4>
-										<span>Agancy</span>
-
-										{portfolioBlockData.agancy}
-									</h4>
-								)}
-							</div>
-						</div>
-
-						<div className="box">
-							<span className="box__glitch"></span>
-							<div className="header">
-								<span>01</span> Roles
-							</div>
-							<hr />
-							<div className="box-wrapper max-height">
-								<div className="tags">
-									{portfolioBlockData.category.map((cat) => (
-										<span key={cat}>{cat} </span>
-									))}
-								</div>
-							</div>
-						</div>
-
-						<div className="box box--max">
-							<span className="box__glitch"></span>
-							<div className="header">
-								<span>02</span> Tech
-							</div>
-							<hr />
-							<div className="box-wrapper max-height ">
-								<div className="tags">
-									{portfolioBlockData.tag.map((tag) => (
-										<span key={tag}>{tag} </span>
-									))}
-								</div>
-							</div>
-						</div>
-					</div>
-
-					{portfolioBlockBody && (
-						<div className="wrapper">
+					<div className="portfolioBlockBody">
+						<div>
 							<div className="box">
 								<span className="box__glitch"></span>
 								<div className="header">
-									<span>4</span> About
+									<span>01</span> Info
 								</div>
 								<hr />
 								<div className="box-wrapper">
-									<div
-										className="blog-post-content"
-										dangerouslySetInnerHTML={{
-											__html: portfolioBlockBody,
-										}}
-									/>
-									<div>{portfolioBlockData.body_text}</div>
+									<h4>
+										<span>Date</span>
+
+										{portfolioBlockData.port_date}
+									</h4>
+									<h4>
+										<span>Client</span>
+
+										{portfolioBlockData.client}
+									</h4>
+									{portfolioBlockData.agancy && (
+										<h4>
+											<span>Agancy</span>
+
+											{portfolioBlockData.agancy}
+										</h4>
+									)}
 								</div>
 							</div>
-							<br />
-						</div>
-					)}
 
-					<div className="portfolioBlockBody wrapper">
-						<div>
+							<div className="box">
+								<span className="box__glitch"></span>
+								<div className="header">
+									<span>01</span> Roles
+								</div>
+								<hr />
+								<div className="box-wrapper max-height">
+									<div className="tags">
+										{portfolioBlockData.category.map(
+											(cat) => (
+												<span key={cat}>{cat} </span>
+											)
+										)}
+									</div>
+								</div>
+							</div>
+
+							<div className="box">
+								<span className="box__glitch"></span>
+								<div className="header">
+									<span>02</span> Tech
+								</div>
+								<hr />
+								<div className="box-wrapper max-height ">
+									<div className="tags">
+										{portfolioBlockData.tag.map((tag) => (
+											<span key={tag}>{tag} </span>
+										))}
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className=" gallery-wrapper">
+							{portfolioBlockBody && (
+								<div className="box">
+									<span className="box__glitch"></span>
+									<div className="header">
+										<span>4</span> About
+									</div>
+									<hr />
+									<div className="box-wrapper">
+										<div
+											className="blog-post-content"
+											dangerouslySetInnerHTML={{
+												__html: portfolioBlockBody,
+											}}
+										/>
+										<div>
+											{portfolioBlockData.body_text}
+										</div>
+									</div>
+								</div>
+							)}
 							<div className="box box--max">
 								<div className="header">
 									<span>5</span> Gallery
@@ -211,6 +210,10 @@ const IndexPage = ({ data, pageContext }) => {
 								</div>
 							</div>
 						</div>
+					</div>
+
+					<div className="portfolioBlockBody ">
+						<div></div>
 					</div>
 					<div className="wrapper pagination">
 						{prevArticle}

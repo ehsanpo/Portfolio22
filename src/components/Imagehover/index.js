@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import hoverEffect from "hover-effect";
-import portfolioImage from "../../images/ep-1.jpg";
-import portfolioImage2 from "../../images/ep-2.jpg";
+import portfolioImage from "../../images/ep-3-3.jpg";
+import portfolioImage2 from "../../images/ep-3-2.jpg";
 import flip1 from "../../images/111.jpg";
 import flip2 from "../../images/112.jpg";
 import flip3 from "../../images/113.jpg";
@@ -45,7 +45,8 @@ const LocalImage = () => {
 			ref={container}
 			style={{
 				width: 300,
-				height: 500,
+				height: 437,
+				marginTop:80
 			}}
 		/>
 	);
