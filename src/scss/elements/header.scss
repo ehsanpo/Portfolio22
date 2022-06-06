@@ -32,9 +32,15 @@ header.header {
 	@include bp-medium {
 		min-height: 32px;
 	}
+	& > div {
+		transition: $transition;
+		min-height: 0vh;
+
+	}
 	&.open {
 		//clip-path: none;
-		min-height: 100vh;
+		height: 100vh;
+
 	}
 	.wrapper {
 		//overflow: hidden;
@@ -43,6 +49,7 @@ header.header {
 	.open {
 		height: 100vh;
 		padding-top: 20vh;
+		min-height: 100vh;
 		li {
 			@extend %anim-delay;
 		}
@@ -57,6 +64,7 @@ header.header {
 		padding: 0;
 		text-align: center;
 		height: 0;
+		min-height: 0px;
 		overflow: hidden;
 		box-sizing: border-box;
 		transition: $transition;

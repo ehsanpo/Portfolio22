@@ -1,6 +1,7 @@
 /* Typography
  ========================================================================== */
-
+ @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+ 
 @font-face {
 	font-family: "Tomorrow";
 	src: url("../fonts/Tomorrow-Regular.woff2") format("woff2"),
@@ -17,16 +18,16 @@
 	font-weight: 600;
 }
 
-$headlineFont: "hudson";
+$headlineFont: "Rajdhani";
 $bodyFont: "Tomorrow";
 
 html {
-	font-size: 16px;
+	font-size: 18px;
 	background: #2e3443;
 }
 body {
 	line-height: 1.7;
-	background: var(--gx);
+	background: var(--g4); 
 	background-attachment: fixed;
 	color: #fff;
 	font-family: $bodyFont;
@@ -37,9 +38,10 @@ a {
 	color: #fff;
 	font-family: $headlineFont;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: 600;
+	transition: all 350ms ease-in-out;
 	&:hover {
-		color: #fff;
+		color: var(--yellow);
 	}
 }
 h1 {
@@ -47,7 +49,7 @@ h1 {
 	font-family: $headlineFont;
 	letter-spacing: -0.8px;
 	line-height: 1;
-	font-weight: bold;
+	font-weight: 700;
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
@@ -78,12 +80,12 @@ h2 {
 	letter-spacing: -0.6px;
 	font-size: 28px;
 	margin-bottom: 16px;
-	font-weight: bold;
+	font-weight: 600;
 	display: inline-block;
-	@include bp-medium {
-		font-size: 32px;
-		letter-spacing: -0.7px;
-	}
+	// @include bp-medium {
+	// 	font-size: 32px;
+	// 	letter-spacing: -0.7px;
+	// }
 }
 
 section {
@@ -131,7 +133,7 @@ h6 {
 p {
 	line-height: 1.5;
 	margin-bottom: 8px;
-	font-size: 16px;
+	font-size: 18px;
 }
 .f-l {
 	font-size: 20px;

@@ -8,7 +8,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 const Award = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			image1: file(relativePath: { eq: "cannen.png" }) {
+			image1: file(relativePath: { eq: "cannen-b.png" }) {
 				childImageSharp {
 					gatsbyImageData(
 						layout: FIXED
@@ -18,7 +18,7 @@ const Award = () => {
 					)
 				}
 			}
-			image2: file(relativePath: { eq: "svenskadesign.png" }) {
+			image2: file(relativePath: { eq: "svenskadesign-b.png" }) {
 				childImageSharp {
 					gatsbyImageData(
 						layout: FIXED
@@ -27,7 +27,7 @@ const Award = () => {
 					)
 				}
 			}
-			image3: file(relativePath: { eq: "guldagg.png" }) {
+			image3: file(relativePath: { eq: "guldagg-b.png" }) {
 				childImageSharp {
 					gatsbyImageData(
 						layout: FIXED
@@ -66,13 +66,15 @@ const Award = () => {
 						<div className="content">
 							<h3>Svenska design</h3>
 							Gold Category Digital Design
+							<br />
 						</div>
-						<Link
-							className="btn btn--link btn--yellow"
+						<Button
+							className="btn btn--b btn--link"
+							type="link"
 							to="/portfolio/malmo-saluhall/"
 						>
 							View project
-						</Link>
+						</Button>
 					</InViewMonitor>
 				</div>
 				<div className="Awards">
@@ -94,12 +96,12 @@ const Award = () => {
 							Silver Lion in Promo & Activation, Bronze Lion in
 							Cyber & Shortlist in Media
 						</div>
-						<Link
-							className="btn btn--link btn--yellow"
+						<Button
+							className="btn btn--b btn--link"
 							to="/portfolio/toolpool/"
 						>
 							View project
-						</Link>
+						</Button>
 					</InViewMonitor>
 				</div>
 				<div className="Awards">
@@ -121,12 +123,12 @@ const Award = () => {
 							Gold Category PR & Silver Categories Digital and
 							Alternative Media
 						</div>
-						<Link
-							className="btn btn--link btn--yellow"
+						<Button
+							className="btn btn--b btn--link"
 							to="/portfolio/toolpool/"
 						>
 							View project
-						</Link>
+						</Button>
 					</InViewMonitor>
 				</div>
 			</div>

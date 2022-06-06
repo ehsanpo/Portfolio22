@@ -5,12 +5,20 @@ import SeO from "../components/seo";
 import InViewMonitor from "react-inview-monitor";
 import Award from "../components/Award";
 import Button from "../components/Button";
+import CodersRankSkillsChart from "@codersrank/skills-chart";
+
+if (typeof window !== "undefined") {
+	window.customElements.define(
+		"codersrank-skills-chart",
+		CodersRankSkillsChart
+	);
+}
 
 const NotFoundPage = () => {
 	const Imagehover = Loadable(() => import("../components/Imagehover"));
 	return (
 		<Layout>
-			<SeO title="Music Producent" />
+			<SeO title="About Ehsan Pourhadi" />
 			<div className="page-header ">
 				<div className="wrapper">
 					<h1 className="display">About</h1>
@@ -77,7 +85,9 @@ const NotFoundPage = () => {
 											2020
 										</span>
 									</h4>
-									<p>Working with React &amp; Ruby</p>
+									<p>
+										Working with Gatsby &amp; Ruby on Rails
+									</p>
 								</div>
 							</li>
 							<li

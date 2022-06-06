@@ -1,7 +1,50 @@
 .Awards {
 	text-align: center;
 	color: #fff;
+	clip-path: polygon(
+		-1px 15px,
+		0px 15px,
+		15px 0px,
+		15px 0px,
+		15px 0px,
+		15px 0px,
+		15px -1px,
+		calc(50% - 22.5px) -1px,
+		calc(50% - 22.5px) 0px,
+		calc(50% - 7.5px) 15px,
+		calc(50% + 7.5px) 15px,
+		calc(50% + 22.5px) 0px,
+		calc(50% + 22.5px) -1px,
+		calc(100% - 15px) -1px,
+		calc(100% - 15px) 0px,
+		100% 15px,
+		100% 15px,
+		100% 15px,
+		100% 15px,
+		calc(100% + 1px) 15px,
+		calc(100% + 1px) calc(100% - 30px),
+		100% calc(100% - 30px),
+		calc(100% - 15px) calc(100% - 15px),
+		calc(100% - 15px) calc(100% - 15px),
+		calc(100% - 45px) calc(100% - 15px),
+		calc(100% - 60px) 100%,
+		calc(100% - 60px) calc(100% + 1px),
+		60px calc(100% + 1px),
+		60px 100%,
+		45px calc(100% - 15px),
+		15px calc(100% - 15px),
+		15px calc(100% - 15px),
+		0px calc(100% - 30px),
+		-1px calc(100% - 30px)
+	);
+	background: var(--yellow);
+	color: #000;
+	padding: 48px 24px;
+	.content{
+		margin-bottom: 16px;
+		min-height: 100px;
+	}
 }
-.award-img{
+.award-img {
 	margin: 0 auto;
 }

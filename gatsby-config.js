@@ -1,5 +1,5 @@
 module.exports = {
-	pathPrefix: "/Portfolio22",
+	// pathPrefix: "/Portfolio22",
 	siteMetadata: {
 		title: `Ehsan Pourhadi`,
 		description: `Digital Developer`,
@@ -19,6 +19,12 @@ module.exports = {
 		},
 		"gatsby-plugin-sharp",
 		"gatsby-transformer-sharp",
+		{
+			resolve: "gatsby-plugin-extract-image-colors",
+			options: {
+				extensions: ["jpg", "png"],
+			},
+		},
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {

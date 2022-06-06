@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import SeO from "../components/seo";
 import SpotifyPlayer from "react-spotify-player";
 import InViewMonitor from "react-inview-monitor";
+import { LazyIframe } from 'react-lazy-media'
 
 const NotFoundPage = () => {
 
@@ -18,18 +19,10 @@ const NotFoundPage = () => {
 	return (
 		<Layout>
 			<SeO title="Music Producent" />
-			<div className="page-header">
-				<h2 className="display">Music</h2>
-				<br />
-				<iframe
-					src="https://open.spotify.com/follow/1/?uri=spotify:artist:079CRvThNlTupHjEQ6LCnw&size=detail&theme=dark"
-					width="230"
-					height="56"
-					scrolling="no"
-					frameborder="0"
-					allowtransparency="true"
-					title="Follow me on spotify"
-				></iframe>
+			<div className="page-header ">
+				<div className="wrapper">
+					<h1 className="display">Music</h1>
+				</div>
 			</div>
 			<section>
 				<div className="wrapper">
@@ -136,6 +129,40 @@ const NotFoundPage = () => {
 				>
 					<h2 className="title red">Singels & EP</h2>
 				</InViewMonitor>
+				<div className="wrapper">
+					<div>
+						<h3>Noor - 2022</h3>
+						<SpotifyPlayer
+							uri="spotify:album:7oGREogIXr9kBU6cVvTytF"
+							size={sizeSingel}
+							view="coverart"
+							theme="black"
+						/>
+					</div>
+					<div>
+					</div>
+				</div>
+				<div className="wrapper">
+					<div>
+						<h3>Bellerina - 2022</h3>
+						<SpotifyPlayer
+							uri="spotify:album:2avKo7p73VQlQZuZ5AhdsX"
+							size={sizeSingel}
+							view="coverart"
+							theme="black"
+						/>
+					</div>
+					<div>
+
+						<h3>"20" - 2022</h3>
+						<SpotifyPlayer
+							uri="spotify:album:4VzPczlIoeB84Nn1HsuFq6"
+							size={sizeSingel}
+							view="list"
+							theme="black"
+						/>
+					</div>
+				</div>
 				<div className="wrapper">
 					<div>
 						<h3>Divane - 2021</h3>

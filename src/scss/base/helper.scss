@@ -15,6 +15,7 @@
 .wrapper-l {
 	@extend %max_w_l;
 	flex: none;
+	box-sizing: border-box;
 }
 .v-center {
 	@extend %v_c;

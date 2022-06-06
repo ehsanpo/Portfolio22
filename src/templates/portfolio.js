@@ -32,7 +32,7 @@ const IndexPage = ({ data, pageContext }) => {
 		}, 1000);
 	}, []);
 
-	// console.log(data);
+	console.log(data);
 	// console.log(pageContext);
 	return (
 		<Layout>
@@ -56,7 +56,7 @@ const IndexPage = ({ data, pageContext }) => {
 						<div className="portfolio-topImage">
 							{portfolioBlockData.logo && (
 								<GatsbyImage
-									objectFit="contain"
+									objectFit="cover"
 									alt="test"
 									className="portfolio-image"
 									image={
@@ -98,123 +98,120 @@ const IndexPage = ({ data, pageContext }) => {
 					</div>
 				</div>
 				<section>
-					{/* <div className="wrapper">
-            <div>
-              <div className="decor decor--dot"></div>
-              <div className="decor decor--box"></div>
-              <div className="header-id">{portfolioBlockData.id}</div>
-              <h2 className="display invert">{portfolioBlockData.title}</h2>
-              <div className="decor decor--box"></div>
-              <div className="decor decor--dot"></div>
-            </div>
-          </div> */}
-
-					<div className="portfolioBlockBody">
-						<div>
-							<div className="box">
-								<span className="box__glitch"></span>
-								<div className="header">
-									<span>01</span> Info
-								</div>
-								<hr />
-								<div className="box-wrapper">
-									<h4>
-										<span>Date</span>
-
-										{portfolioBlockData.port_date}
-									</h4>
-									<h4>
-										<span>Client</span>
-
-										{portfolioBlockData.client}
-									</h4>
-									{portfolioBlockData.agancy && (
+					<div className="wrapper">
+						<div className="portfolioBlockBody ">
+							<div className="sticky">
+								<div className="box">
+									<span className="box__glitch"></span>
+									<div className="header">
+										<span>01</span> Info
+									</div>
+									<hr />
+									<div className="box-wrapper">
 										<h4>
-											<span>Agancy</span>
+											<span>Date</span>
 
-											{portfolioBlockData.agancy}
+											{portfolioBlockData.port_date}
 										</h4>
-									)}
+										<h4>
+											<span>Client</span>
+
+											{portfolioBlockData.client}
+										</h4>
+										{portfolioBlockData.agancy && (
+											<h4>
+												<span>Agancy</span>
+
+												{portfolioBlockData.agancy}
+											</h4>
+										)}
+									</div>
+								</div>
+
+								<div className="box">
+									<span className="box__glitch"></span>
+									<div className="header">
+										<span>01</span> Roles
+									</div>
+									<hr />
+									<div className="box-wrapper max-height">
+										<div className="tags">
+											{portfolioBlockData.category.map(
+												(cat) => (
+													<span key={cat}>
+														{cat}{" "}
+													</span>
+												)
+											)}
+										</div>
+									</div>
+								</div>
+
+								<div className="box">
+									<span className="box__glitch"></span>
+									<div className="header">
+										<span>02</span> Tech
+									</div>
+									<hr />
+									<div className="box-wrapper max-height ">
+										<div className="tags">
+											{portfolioBlockData.tag.map(
+												(tag) => (
+													<span key={tag}>
+														{tag}{" "}
+													</span>
+												)
+											)}
+										</div>
+									</div>
 								</div>
 							</div>
-
-							<div className="box">
-								<span className="box__glitch"></span>
-								<div className="header">
-									<span>01</span> Roles
-								</div>
-								<hr />
-								<div className="box-wrapper max-height">
-									<div className="tags">
-										{portfolioBlockData.category.map(
-											(cat) => (
-												<span key={cat}>{cat} </span>
+							<div className=" gallery-wrapper">
+								{portfolioBlockBody && (
+									<div className="box">
+										<span className="box__glitch"></span>
+										<div className="header">
+											<span>4</span> About
+										</div>
+										<hr />
+										<div className="box-wrapper">
+											<div
+												className="blog-post-content"
+												dangerouslySetInnerHTML={{
+													__html: portfolioBlockBody,
+												}}
+											/>
+											<div>
+												{portfolioBlockData.body_text}
+											</div>
+										</div>
+									</div>
+								)}
+								<div className="box box--max">
+									<div className="header">
+										<span>5</span> Gallery
+									</div>
+									<hr />
+									<hr />
+									<div className="box-wrapper">
+										{portfolioBlockData.bilder.map(
+											(bild) => (
+												<GatsbyImage
+													key={bild.id}
+													style={{color:bild.colors.vibrant, boxShadow: "0 0 30px " + bild.colors.vibrant } }
+													image={
+														bild.childImageSharp
+															.gatsbyImageData
+													}
+												/>
 											)
 										)}
 									</div>
 								</div>
 							</div>
-
-							<div className="box">
-								<span className="box__glitch"></span>
-								<div className="header">
-									<span>02</span> Tech
-								</div>
-								<hr />
-								<div className="box-wrapper max-height ">
-									<div className="tags">
-										{portfolioBlockData.tag.map((tag) => (
-											<span key={tag}>{tag} </span>
-										))}
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className=" gallery-wrapper">
-							{portfolioBlockBody && (
-								<div className="box">
-									<span className="box__glitch"></span>
-									<div className="header">
-										<span>4</span> About
-									</div>
-									<hr />
-									<div className="box-wrapper">
-										<div
-											className="blog-post-content"
-											dangerouslySetInnerHTML={{
-												__html: portfolioBlockBody,
-											}}
-										/>
-										<div>
-											{portfolioBlockData.body_text}
-										</div>
-									</div>
-								</div>
-							)}
-							<div className="box box--max">
-								<div className="header">
-									<span>5</span> Gallery
-								</div>
-								<hr />
-								<hr />
-								<div className="box-wrapper">
-									{portfolioBlockData.bilder.map((bild) => (
-										<GatsbyImage
-											key={bild.id}
-											image={
-												bild.childImageSharp
-													.gatsbyImageData
-											}
-										/>
-									))}
-								</div>
-							</div>
 						</div>
 					</div>
 
-					<div className="portfolioBlockBody ">
-						<div></div>
-					</div>
 					<div className="wrapper pagination">
 						{prevArticle}
 						{nextArticle}
@@ -272,6 +269,9 @@ export const query = graphql`
 							placeholder: BLURRED
 							formats: [AUTO, WEBP, AVIF]
 						)
+					}
+					colors {
+						vibrant
 					}
 					id
 				}

@@ -76,6 +76,17 @@
 	&.btn--3 .btn__glitch {
 		background-color: var(--lighblue);
 	}
+	&.btn--b .btn__content {
+		background-color: var(--black-color);
+		color: var(--yellow);
+	}
+	&.btn--b .btn__label {
+		background-color: var(--white-color);
+		color: var(--black-color);
+	}
+	&.btn--b .btn__glitch {
+		background-color: var(--black-color);
+	}
 }
 .btn__content:hover {
 	text-shadow: 0 0 1px;
@@ -120,6 +131,14 @@
 }
 .btn--yellow {
 	color: var(--yellow);
+	&:hover {
+		color: var(--lighblue);
+	}
+}
+.btn--lighblue {
+
+	color: var(--lighblue);
+
 	&:hover {
 		color: var(--lighblue);
 	}

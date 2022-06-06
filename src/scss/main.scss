@@ -35,10 +35,6 @@ img {
 		drop-shadow(2px 1px #02d8f3);
 }
 
-h1 {
-	text-transform: uppercase;
-}
-
 section {
 	padding: 128px 0;
 	background: var(--p3);
@@ -63,7 +59,7 @@ section {
 		@extend .display;
 		margin-bottom: 64px;
 		margin-top: -48px;
-		font-family: "hudson";
+		font-family: $headlineFont;
 	}
 }
 header {
@@ -243,6 +239,7 @@ ol {
 
 	.gatsby-image-wrapper {
 		overflow: hidden;
+		height: 100%;
 	}
 	.box {
 		h1,
@@ -284,9 +281,42 @@ ol {
 		margin-bottom: 24px;
 		min-width: 100%;
 	}
+	.sticky {
+		position: sticky;
+		top: 32px;
+	}
 }
 .gallery-wrapper {
 	min-width: 75%;
+	.gatsby-image-wrapper {
+		margin-bottom: 32px;
+		border: 24px solid ;
+		border-radius: 2px;
+		clip-path: polygon(
+			-1px -1px,
+			calc(50% - 22.5px) -1px,
+			calc(50% - 22.5px) 0px,
+			calc(50% - 7.5px) 16px,
+			calc(50% + 7.5px) 16px,
+			calc(50% + 22.5px) 0px,
+			calc(50% + 22.5px) -1px,
+			calc(100% + 1px) -1px,
+			calc(100% + 1px) calc(100% - 30px),
+			100% calc(100% - 30px),
+			calc(100% - 16px) calc(100% - 16px),
+			calc(100% - 16px) calc(100% - 16px),
+			calc(100% - 45px) calc(100% - 16px),
+			calc(100% - 60px) 100%,
+			calc(100% - 60px) calc(100% + 1px),
+			30px calc(100% + 1px),
+			30px 100%,
+			15px calc(100% - 15px),
+			15px calc(100% - 15px),
+			15px calc(100% - 45px),
+			0px calc(100% - 60px),
+			-1px calc(100% - 60px)
+		);
+	}
 }
 
 .decor {

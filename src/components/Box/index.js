@@ -8,8 +8,7 @@ function onlyCapitalLetters(str) {
 }
 
 const Box = ({ node, image }) => {
-	const { id, title, tag, permalink, category, logo } = node;
-	console.log(node);
+	const { id, title, tag, permalink, category, logo } = node;;
 	return (
 		<Link to={permalink} className="box">
 			<span className="box__glitch"></span>
@@ -28,17 +27,6 @@ const Box = ({ node, image }) => {
 						image={logo[0]?.childImageSharp.gatsbyImageData}
 					/>
 				)}
-
-				{/* <GatsbyImage
-									
-									alt="test"
-									className="portfolio-image"
-									image={
-										portfolioBlockData.logo[0]
-											.childImageSharp.gatsbyImageData
-									}
-								/> */}
-				{/* <LocalImage filename={logo}/> */}
 				<h3>{title}</h3>
 				<div className="tags">
 					{tag.slice(0, 3).map((tag) => (

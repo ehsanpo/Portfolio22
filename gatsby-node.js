@@ -151,10 +151,22 @@ exports.createPages = ({ graphql, actions }) => {
 };
 
 /* Allows named imports */
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
 	actions.setWebpackConfig({
 		resolve: {
 			modules: [path.resolve(__dirname, "src"), "node_modules"],
 		},
 	});
+	if (stage === "build-html" || stage === "develop-html") {
+		actions.setWebpackConfig({
+		  module: {
+			rules: [
+			  {
+				test: /skills-chart/,
+				use: loaders.null(),
+			  },
+			],
+		  },
+		})
+	  }
 };

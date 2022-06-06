@@ -106,7 +106,6 @@ const Skills = () => {
 	};
 	list = typeof document !== `undefined` ? document.getElementsByTagName("button"): [];
 	const handleClick = (chart_op, e) => {
-		console.log(list)
 		for (var i = 0; i < list.length; i++) {
 			list[i].classList.remove("active", "Overall");
 		}
@@ -114,9 +113,6 @@ const Skills = () => {
 		setSkdata(return_array[chart_op]);
 	};
 
-	// useEffect(() => {
-	// 	setSkdata(return_array["Overall"]);
-	// }, []);
 
 	return (
 		<Layout>
@@ -126,7 +122,7 @@ const Skills = () => {
 					<h1 className="display">Skills</h1>
 				</div>
 			</div>
-			<section className="bg-color-1">
+			<section className="bg-color-3">
 				<div className="wrapper-m">
 					<div className="radar-right">
 						{chart_data.map((skill) => (
@@ -154,6 +150,16 @@ const Skills = () => {
 					<Stack type="wordpress" />
 				</div>
 			</section>
+			<div className="wrapper">
+					<codersrank-skills-chart
+						labels={true}
+						username="ehsanpo"
+						legend
+						tooltip
+						branding={false}
+						skills="JavaScript, HTML, CSS, JSON, Less, NodeJS, PHP, Python, ReactJS, Ruby, SCSS,SQL,Shell,TypeScript"
+					/>
+				</div>
 			<ImageAndText
 				left
 				nopad
