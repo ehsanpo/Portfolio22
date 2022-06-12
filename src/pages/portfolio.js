@@ -1,12 +1,18 @@
 import React from "react";
-//import { Link } from "gatsby"
 import Layout from "../components/layout";
 import SeO from "../components/seo";
 import { graphql } from "gatsby";
 import PortfolioBlock from "../components/PortfolioBlock";
 
+const convert = (produkt) => {
+	if (produkt.category == "streaming") {
+		return {
+			name: produkt.name,
+		};
+	}
+};
+
 const Portfolio = ({ data }) => {
-	// console.log(data)
 	return (
 		<Layout>
 			<SeO title="Developer Portfolio" />
@@ -15,7 +21,7 @@ const Portfolio = ({ data }) => {
 					<h1 className="display">Portfolio</h1>
 				</div>
 			</div>
-			<section>
+			<section className="bg-color-1">
 				<div className="wrapper">
 					<div className="wrapper-m">
 						<div>
@@ -59,9 +65,9 @@ export const query = graphql`
 							childImageSharp {
 								gatsbyImageData(
 									layout: CONSTRAINED
-									
 									placeholder: BLURRED
 									formats: [AUTO, WEBP, AVIF]
+									width: 200
 								)
 							}
 						}

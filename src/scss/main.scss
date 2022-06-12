@@ -68,6 +68,9 @@ header {
 .no-bg {
 	background: none;
 }
+// .bg-color-1 {
+// 	background: var(--g5);
+// }
 
 ul,
 ol {
@@ -105,7 +108,7 @@ ol {
 	margin-top: -32px;
 }
 .page-header {
-	padding: 32px 0;
+	padding: 32px 0 24px 0;
 	text-align: center;
 }
 .pagination {
@@ -290,7 +293,7 @@ ol {
 	min-width: 75%;
 	.gatsby-image-wrapper {
 		margin-bottom: 32px;
-		border: 24px solid ;
+		border: 24px solid;
 		border-radius: 2px;
 		clip-path: polygon(
 			-1px -1px,

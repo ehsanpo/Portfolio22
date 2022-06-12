@@ -3,10 +3,9 @@ import Layout from "../components/layout";
 import SeO from "../components/seo";
 import SpotifyPlayer from "react-spotify-player";
 import InViewMonitor from "react-inview-monitor";
-import { LazyIframe } from 'react-lazy-media'
+import { LazyIframe } from "react-lazy-media";
 
 const NotFoundPage = () => {
-
 	const size = {
 		width: "100%",
 		height: 300,
@@ -24,7 +23,7 @@ const NotFoundPage = () => {
 					<h1 className="display">Music</h1>
 				</div>
 			</div>
-			<section>
+			<section className="bg-color-3">
 				<div className="wrapper">
 					<div className="wrapper-m ">
 						Music is a part of our DNA, and since childhood, I have
@@ -139,8 +138,7 @@ const NotFoundPage = () => {
 							theme="black"
 						/>
 					</div>
-					<div>
-					</div>
+					<div></div>
 				</div>
 				<div className="wrapper">
 					<div>
@@ -153,7 +151,6 @@ const NotFoundPage = () => {
 						/>
 					</div>
 					<div>
-
 						<h3>"20" - 2022</h3>
 						<SpotifyPlayer
 							uri="spotify:album:4VzPczlIoeB84Nn1HsuFq6"

@@ -1,7 +1,7 @@
 /* Typography
  ========================================================================== */
- @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
- 
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap");
+
 @font-face {
 	font-family: "Tomorrow";
 	src: url("../fonts/Tomorrow-Regular.woff2") format("woff2"),
@@ -9,6 +9,7 @@
 		url("../fonts/Tomorrow-Regular.ttf") format("opentype");
 	font-style: normal;
 	font-weight: 400;
+	font-display: swap;
 }
 @font-face {
 	font-family: "hudson";
@@ -16,6 +17,7 @@
 		url("../fonts/HudsonNY.woff") format("woff");
 	font-style: normal;
 	font-weight: 600;
+	font-display: swap;
 }
 
 $headlineFont: "Rajdhani";
@@ -27,7 +29,7 @@ html {
 }
 body {
 	line-height: 1.7;
-	background: var(--g4); 
+	background: var(--g4);
 	background-attachment: fixed;
 	color: #fff;
 	font-family: $bodyFont;

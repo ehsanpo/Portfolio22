@@ -16,7 +16,7 @@ const Portfolio = ({ data }) => (
 			</div>
 		</div>
 
-		<section>
+		<section className="bg-color-1">
 			<div className="wrapper">
 				<div className="wrapper-m">
 					<p>

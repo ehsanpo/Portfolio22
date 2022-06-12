@@ -62,9 +62,12 @@
 		margin-top: 8px;
 	}
 	.portfolio-image-thumb {
-		margin-bottom: 16px;
-		max-height: 170px;
 		padding: 0;
+		margin: 0 auto;
+		margin-bottom: 16px;
+		width: 200px;
+		min-height: 170px;
+		display: block;
 	}
 	h3 {
 		margin-top: 0;
