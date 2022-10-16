@@ -49,87 +49,96 @@ const Award = () => {
 				<h2 className="title yellow">Awards</h2>
 			</InViewMonitor>
 			<div className="wrapper">
-				<div className="Awards">
-					<InViewMonitor
-						intoViewMargin="10%"
-						classNameNotInView="vis-hidden"
-						classNameInView="animated titleIn"
-						toggleClassNameOnInView
-					>
-						<GatsbyImage
-							alt="Svenska design"
-							className="award-img"
-							image={
-								data?.image2?.childImageSharp.gatsbyImageData
-							}
-						/>
-						<div className="content">
-							<h3>Svenska design</h3>
-							Gold Category Digital Design
-							<br />
-						</div>
-						<Button
-							className="btn btn--b btn--link"
-							type="link"
-							to="/portfolio/malmo-saluhall/"
+				<div className="awards-container">
+					<div className="Awards">
+						<InViewMonitor
+							intoViewMargin="10%"
+							classNameNotInView="vis-hidden"
+							classNameInView="animated titleIn"
+							toggleClassNameOnInView
 						>
-							View project
-						</Button>
-					</InViewMonitor>
+							<GatsbyImage
+								alt="Svenska design"
+								className="award-img"
+								image={
+									data?.image2?.childImageSharp
+										.gatsbyImageData
+								}
+							/>
+							<div className="content">
+								<h3>Svenska design</h3>
+								Gold Category Digital Design
+								<br />
+							</div>
+							<Button
+								className="btn btn--b btn--link"
+								type="link"
+								to="/portfolio/malmo-saluhall/"
+							>
+								View project
+							</Button>
+						</InViewMonitor>
+					</div>
 				</div>
-				<div className="Awards">
-					<InViewMonitor
-						intoViewMargin="10%"
-						classNameNotInView="vis-hidden"
-						classNameInView="animated titleIn"
-						toggleClassNameOnInView
-					>
-						<GatsbyImage
-							alt="Cannes lions"
-							className="award-img"
-							image={
-								data?.image1?.childImageSharp.gatsbyImageData
-							}
-						/>
-						<div className="content">
-							<h3>Cannes lions</h3>
-							Silver Lion in Promo & Activation, Bronze Lion in
-							Cyber & Shortlist in Media
-						</div>
-						<Button
-							className="btn btn--b btn--link"
-							to="/portfolio/toolpool/"
+				<div className="awards-container">
+					<div className="Awards">
+						<InViewMonitor
+							intoViewMargin="10%"
+							classNameNotInView="vis-hidden"
+							classNameInView="animated titleIn"
+							toggleClassNameOnInView
 						>
-							View project
-						</Button>
-					</InViewMonitor>
+							<GatsbyImage
+								alt="Cannes lions"
+								className="award-img"
+								image={
+									data?.image1?.childImageSharp
+										.gatsbyImageData
+								}
+							/>
+							<div className="content">
+								<h3>Cannes lions</h3>
+								Silver Lion in Promo & Activation, Bronze Lion
+								in Cyber & Shortlist in Media
+							</div>
+							<Button
+								className="btn btn--b btn--link"
+								to="/portfolio/toolpool/"
+							>
+								View project
+							</Button>
+						</InViewMonitor>
+					</div>
 				</div>
-				<div className="Awards">
-					<InViewMonitor
-						intoViewMargin="10%"
-						classNameNotInView="vis-hidden"
-						classNameInView="animated titleIn"
-						toggleClassNameOnInView
-					>
-						<GatsbyImage
-							alt="Guldägget"
-							className="award-img"
-							image={
-								data?.image3?.childImageSharp.gatsbyImageData
-							}
-						/>
-						<div className="content">
-							<h3>Guldägget</h3>
-							Gold Category PR & Silver Categories Digital and
-							Alternative Media
-						</div>
-						<Button
-							className="btn btn--b btn--link"
-							to="/portfolio/toolpool/"
+				<div className="awards-container">
+					<div className="Awards">
+						<InViewMonitor
+							intoViewMargin="10%"
+							classNameNotInView="vis-hidden"
+							classNameInView="animated titleIn"
+							toggleClassNameOnInView
 						>
-							View project
-						</Button>
-					</InViewMonitor>
+							<GatsbyImage
+								alt="Guldägget"
+								className="award-img"
+								image={
+									data?.image3?.childImageSharp
+										.gatsbyImageData
+								}
+							/>
+							<div className="content">
+								<h3>Guldägget</h3>
+								Gold Category PR & Silver Categories Digital and
+								Alternative Media
+							</div>
+							<Button
+								className="btn btn--b btn--link"
+								to="/portfolio/toolpool/"
+							>
+								View project
+							</Button>
+						</InViewMonitor>
+					</div>
 				</div>
 			</div>
 			<div className="center">
